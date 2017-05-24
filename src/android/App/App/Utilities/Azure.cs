@@ -16,16 +16,12 @@ namespace App.Utilities
 
         public ServiceHelper()
         {
-            mockClient = new Mock<IMobileServiceClient>(MockBehavior.Loose);
-            mockTable = new Mock<IMobileServiceTable<User>>(MockBehavior.Loose);
-            var item = new User();
+            mockClient = new Mock<IMobileServiceClient>(MockBehavior.Strict);
+            mockTable = new Mock<IMobileServiceTable<User>>(MockBehavior.Strict);
+
             mockTable
-                .Setup(m => m.InsertAsync(item))
-                .Returns(() =>
-                {
-                    Thread.Sleep(10000);
-                    return Task.CompletedTask;
-                });
+                .Setup(m => m.InsertAsync(It.IsAny<User>()))
+                .Returns(Task.Delay(5000));
             mockClient
                 .Setup(m => m.GetTable<User>())
                 .Returns(mockTable.Object);
@@ -43,12 +39,13 @@ namespace App.Utilities
                     Name = name,
                     DeviceId = deviceId
                 });
+
+                return true;
             }
-            catch (System.Exception)
+            catch
             {
                 return false;
             }
-            return true;
         }
     }
     public class User
