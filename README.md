@@ -1,6 +1,7 @@
 # Xamarin
 
 # Structure
+Each type of project has its own structure:
 
 ## Xamarin Forms Project Structure (Cross-platform)
 Path                           | Explanation
@@ -26,11 +27,12 @@ Path                        | Explanation
 `./Components`              | Add new features and third-party services.
 
 # Sharing Code
-
+There are some strategies for sharing code between platforms:
 * **Shared Asset Project (SAP)**: Files and source code that are combined at compile time.
 * **Portable Class Library (PCL)**: A **DLL** library that encapsulates common code and can be referenced from other projects.
 
 # XAML
+The design of the views is usually developed in XAML:
 ```xaml
 <ContentPage xmlns="..." xmlns:x="..." x:Class="App.MainPage" Title="My App">
   <Label Text="Hello World!" VerticalOptions="Center" HorizontalOptions="Center" FontSize="Large" />
