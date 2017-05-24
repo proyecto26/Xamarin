@@ -40,8 +40,15 @@ namespace App
             );
 
             ServiceHelper helper = new ServiceHelper();
-            await helper.addUser("jdnichollsc@hotmail.com", "Juan David Nicholls Cardona", deviceId);
-            txtView.Text = "Loaded";
+            var result = await helper.addUser("jdnichollsc@hotmail.com", "Juan David Nicholls Cardona", deviceId);
+            if (result)
+            {
+                txtView.Text = "Loaded";
+            }
+            else
+            {
+                txtView.Text = "The user could not be added";
+            }
         }
     }
 }

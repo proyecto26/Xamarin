@@ -3,6 +3,7 @@ using System.Threading.Tasks;
 using Newtonsoft.Json;
 using Moq;
 using Newtonsoft.Json.Linq;
+using System.Threading;
 
 namespace App.Utilities
 {
@@ -15,27 +16,39 @@ namespace App.Utilities
 
         public ServiceHelper()
         {
-            mockClient = new Mock<IMobileServiceClient>(MockBehavior.Strict);
-            mockTable = new Mock<IMobileServiceTable<User>>(MockBehavior.Strict);
+            mockClient = new Mock<IMobileServiceClient>(MockBehavior.Loose);
+            mockTable = new Mock<IMobileServiceTable<User>>(MockBehavior.Loose);
             var item = new User();
             mockTable
                 .Setup(m => m.InsertAsync(item))
-                .Returns(Task.FromResult(item));
+                .Returns(() =>
+                {
+                    Thread.Sleep(10000);
+                    return Task.CompletedTask;
+                });
             mockClient
                 .Setup(m => m.GetTable<User>())
                 .Returns(mockTable.Object);
         }
 
-        public async Task addUser(string email, string name, string deviceId)
+        public async Task<bool> addUser(string email, string name, string deviceId)
         {
-            _userTable = mockClient.Object.GetTable<User>();
-
-            await _userTable.InsertAsync(new User
+            try
             {
-                Email = email,
-                Name = name,
-                DeviceId = deviceId
-            });
+                _userTable = mockClient.Object.GetTable<User>();
+
+                await _userTable.InsertAsync(new User
+                {
+                    Email = email,
+                    Name = name,
+                    DeviceId = deviceId
+                });
+            }
+            catch (System.Exception)
+            {
+                return false;
+            }
+            return true;
         }
     }
     public class User
