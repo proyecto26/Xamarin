@@ -1,5 +1,7 @@
 # Xamarin
 
+# Structure
+
 ## Xamarin Forms Project Structure (Cross-platform)
 Path                           | Explanation
 --------------- | -------------
@@ -23,6 +25,13 @@ Path                        | Explanation
 `./AppDelegate.cs`          | Validate the status of the application to know when the application is active, running or finished.
 `./Components`              | Add new features and third-party services.
 
+# Sharing Code
+
+* **Shared Asset Project (SAP)**: Files and source code that are combined at compile time.
+* **Portable Class Library (PCL)**: A **DLL** library that encapsulates common code and can be referenced from other projects.
+
+# Tips
+
 ## Remote Login for Mac
 
 - Enable **Remote Login** option on Mac:
@@ -33,7 +42,7 @@ Path                        | Explanation
   
   **Visual Studio** => **Tools** => **Options** => **Xamarin** => **iOS Settings** => **Find Xamarin Mac Agent**
   
-**Note:** A **SSH key** will be created and registered in the file **authorized_keys** on the **Mac**.
+> **Note:** A **SSH key** will be created and registered in the file **authorized_keys** on the **Mac**.
 
 # Happy coding
 Made with <3
