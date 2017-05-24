@@ -30,6 +30,13 @@ Path                        | Explanation
 * **Shared Asset Project (SAP)**: Files and source code that are combined at compile time.
 * **Portable Class Library (PCL)**: A **DLL** library that encapsulates common code and can be referenced from other projects.
 
+# XAML
+```xaml
+<ContentPage xmlns="..." xmlns:x="..." x:Class="App.MainPage" Title="My App">
+  <Label Text="Hello World!" VerticalOptions="Center" HorizontalOptions="Center" FontSize="Large" />
+</ContentPage>
+```
+
 # Tips
 
 ## Remote Login for Mac
