@@ -35,7 +35,12 @@ There are some strategies for sharing code between platforms:
 The design of the views is usually developed in XAML:
 ```xaml
 <ContentPage xmlns="..." xmlns:x="..." x:Class="App.MainPage" Title="My App">
-  <Label Text="Hello World!" VerticalOptions="Center" HorizontalOptions="Center" FontSize="Large" />
+  <Label Text="Hello World!" VerticalOptions="Center" HorizontalOptions="Center" FontSize="Large">
+    <OnPlatform x:TypeArguments="Text"
+                iOS="Hello iOS World!"
+                Android="Hello Android World!"
+                WinPhone="Hello Windows World!" />
+  </Label>
 </ContentPage>
 ```
 
