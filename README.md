@@ -43,6 +43,12 @@ The design of the views is usually developed in XAML:
   </Label>
 </ContentPage>
 ```
+Also you can modify the views from classes:
+```csharp
+if(Device.OS == TargetPlatform.iOS){
+  label.Text = "Hello iOS World!";
+}
+```
 
 # Tips
 
