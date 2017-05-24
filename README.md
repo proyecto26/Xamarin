@@ -3,20 +3,20 @@
 # Structure
 Each type of project has its own structure:
 
-## Xamarin Forms Project Structure (Cross-platform)
+* ## Xamarin Forms Project Structure (Cross-platform)
 Path                           | Explanation
 --------------- | -------------
 `./App.xaml`    | Global resources in the app.
 `./App.xaml.cs` | Extend the app.
 
-## Android Project Structure
+* ## Android Project Structure
 Path                           | Explanation
 ------------------------------ | -------------
 `./MainActivity.cs`            | Main Class.
 `./Resources/layout/Main.axml` | Graphic Interface using XAML.
 `./Components`                 | Add new features and third-party services.
 
-## iOS Project Structure
+* ## iOS Project Structure
 Path                        | Explanation
 --------------------------- | -------------
 `./ViewController.cs`       | Main Class. We can configure alerts about Memory, Storage, etc.
