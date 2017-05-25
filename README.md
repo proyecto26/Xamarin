@@ -1,4 +1,7 @@
 # Xamarin
+Native apps for multiple platforms **(iOS, Android and Windows)** on a shared C# codebase.
+* **Xamarin.Forms:** Apps that require little platform-specific functionality (Code sharing is more important than custom UI).
+* **Xamarin.iOS & Xamarin.Android:** Apps with interactions that require native behavior (Custom UI is more important than code sharing).
 
 # Structure
 Each type of project has its own structure:
