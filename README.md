@@ -71,6 +71,18 @@ if(Device.OS == TargetPlatform.iOS){
 - __MOBILE__ (Android and iOS platforms)
 - __IOS__ (Xamarin.iOS)
 - __ANDROID__ (Xamarin.Android)
+```c#
+#if __ANDROID__
+  string libraryPath = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
+#else
+#if __IOS__
+  string documentsPath = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
+  string libraryPath = Path.Combine(documentsPath, "..", "Library");
+#else
+  string libraryPath = Windows.Storage.ApplicationData.Current.LocalFolder.Path;
+#endif
+var path = Path.Combine(libraryPath, filename);
+```
 
 # Happy coding
 Made with <3
