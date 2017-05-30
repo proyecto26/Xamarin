@@ -68,6 +68,7 @@ if(Device.OS == TargetPlatform.iOS){
 > **Note:** A **SSH key** will be created and registered in the file **authorized_keys** on the **Mac**.
 
 ## Conditional Compilation for shared resources
+We can identify some compilation symbols for shared projects:
 - __MOBILE__ (Android and iOS platforms)
 - __IOS__ (Xamarin.iOS)
 - __ANDROID__ (Xamarin.Android)
