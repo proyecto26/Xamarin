@@ -3,12 +3,12 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
-    <ProjectGuid>{DDDDA00A-15FB-4F62-A1CB-6EC6642AB317}</ProjectGuid>
+    <ProjectGuid>{2DFF95E1-B7C0-417E-81FE-9AF6CA4627EF}</ProjectGuid>
     <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Exe</OutputType>
-    <RootNamespace>iOS.App</RootNamespace>
+    <RootNamespace>iOS</RootNamespace>
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
-    <AssemblyName>iOS.App</AssemblyName>
+    <AssemblyName>iOS</AssemblyName>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
     <DebugSymbols>true</DebugSymbols>
@@ -99,14 +99,15 @@
     <Reference Include="Xamarin.iOS" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\BusinessLogicLayer\BusinessLogicLayer.csproj">
+    <ProjectReference Include="..\..\BusinessLogicLayer\BusinessLogicLayer.csproj">
       <Project>{302cde6b-f865-4bf8-9572-3b5404bb0cb7}</Project>
       <Name>BusinessLogicLayer</Name>
     </ProjectReference>
-    <ProjectReference Include="..\ServiceAccessLayer\ServiceAccessLayer.csproj">
+    <ProjectReference Include="..\..\ServiceAccessLayer\ServiceAccessLayer.csproj">
       <Project>{beecdba1-1437-4cbb-bc3d-1fd960e04e72}</Project>
       <Name>ServiceAccessLayer</Name>
     </ProjectReference>
   </ItemGroup>
+  <Import Project="..\..\SharedProject\SharedProject.projitems" Label="Shared" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>
