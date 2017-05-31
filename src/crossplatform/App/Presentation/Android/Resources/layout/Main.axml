@@ -8,12 +8,16 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/textView" />
+        android:id="@+id/textView"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:textColor="@android:color/black" />
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/phoneNumberText"
-        android:text="1-855-XAMARIN" />
+        android:text="1-855-XAMARIN"
+        android:textColor="@android:color/background_dark" />
     <Button
         android:text="Convertir"
         android:layout_width="match_parent"
