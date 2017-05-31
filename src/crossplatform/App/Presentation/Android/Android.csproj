@@ -58,11 +58,20 @@
     <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Newtonsoft.Json.6.0.4\lib\portable-net45+wp80+win8+wpa81\Newtonsoft.Json.dll</HintPath>
     </Reference>
-    <Reference Include="SALLab02">
+    <Reference Include="SALLab02, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\..\..\..\xamarin\SALLab02.dll</HintPath>
     </Reference>
-    <Reference Include="SALLab03">
+    <Reference Include="SALLab03, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\..\..\..\xamarin\SALLab03.dll</HintPath>
+    </Reference>
+    <Reference Include="SALLab04, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\xamarin\SALLab04.dll</HintPath>
+    </Reference>
+    <Reference Include="SALLab05">
+      <HintPath>..\..\..\..\..\..\..\xamarin\SALLab05.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -78,6 +87,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MainActivity.cs" />
+    <Compile Include="PlatformSpecific\MessageDialog.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -107,11 +117,16 @@
       <Project>{302cde6b-f865-4bf8-9572-3b5404bb0cb7}</Project>
       <Name>BusinessLogicLayer</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\PCL\PCL.csproj">
+      <Project>{E76C1624-4178-4321-B9C8-AB25783C9D14}</Project>
+      <Name>PCL</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\ServiceAccessLayer\ServiceAccessLayer.csproj">
       <Project>{beecdba1-1437-4cbb-bc3d-1fd960e04e72}</Project>
       <Name>ServiceAccessLayer</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="..\..\SharedProject\SharedProject.projitems" Label="Shared" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Import Project="..\..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets" Condition="Exists('..\..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" />

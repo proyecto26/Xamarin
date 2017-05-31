@@ -1,8 +1,10 @@
-﻿using System;
+﻿using PCL.Helpers;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using UWP.PlatformSpecific;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
@@ -22,19 +24,21 @@ namespace UWP
     /// </summary>
     public sealed partial class MainPage : Page
     {
+        CurrentPlatform currentPlatform;
         public MainPage()
         {
             this.InitializeComponent();
+
+            currentPlatform = new CurrentPlatform(new MessageDialog());
 
             //Show the path of a file
             this.ShowFilePath("database.db");
         }
 
-        async void ShowFilePath(string fileName)
+        void ShowFilePath(string fileName)
         {
             var Utilities = new SharedProject.Utilities();
-            await new Windows.UI.Popups.MessageDialog(Utilities.GetFilePath(fileName))
-                .ShowAsync();
+            currentPlatform.Dialog.ShowMessage(Utilities.GetFilePath(fileName));
         }
     }
 }

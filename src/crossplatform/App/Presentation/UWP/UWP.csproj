@@ -99,6 +99,7 @@
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="PlatformSpecific\MessageDialog.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -132,11 +133,16 @@
       <Project>{302cde6b-f865-4bf8-9572-3b5404bb0cb7}</Project>
       <Name>BusinessLogicLayer</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\PCL\PCL.csproj">
+      <Project>{E76C1624-4178-4321-B9C8-AB25783C9D14}</Project>
+      <Name>PCL</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\ServiceAccessLayer\ServiceAccessLayer.csproj">
       <Project>{beecdba1-1437-4cbb-bc3d-1fd960e04e72}</Project>
       <Name>ServiceAccessLayer</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="..\..\SharedProject\SharedProject.projitems" Label="Shared" />
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
