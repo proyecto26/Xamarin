@@ -61,7 +61,10 @@ namespace AndroidApp
 		{
 			
 			// aapt resource value: 0x7f020000
-			public const int Icon = 2130837504;
+			public const int back = 2130837504;
+			
+			// aapt resource value: 0x7f020001
+			public const int Icon = 2130837505;
 			
 			static Drawable()
 			{
@@ -82,8 +85,23 @@ namespace AndroidApp
 			// aapt resource value: 0x7f070004
 			public const int callHistoryButton = 2131165188;
 			
+			// aapt resource value: 0x7f070006
+			public const int emailLabel = 2131165190;
+			
+			// aapt resource value: 0x7f070007
+			public const int emailText = 2131165191;
+			
+			// aapt resource value: 0x7f070008
+			public const int passwordLabel = 2131165192;
+			
+			// aapt resource value: 0x7f070009
+			public const int passwordText = 2131165193;
+			
 			// aapt resource value: 0x7f070001
 			public const int phoneNumberText = 2131165185;
+			
+			// aapt resource value: 0x7f07000b
+			public const int resultText = 2131165195;
 			
 			// aapt resource value: 0x7f070000
 			public const int textView = 2131165184;
@@ -92,7 +110,10 @@ namespace AndroidApp
 			public const int translateButton = 2131165186;
 			
 			// aapt resource value: 0x7f070005
-			public const int txtResult = 2131165189;
+			public const int validateActivityButton = 2131165189;
+			
+			// aapt resource value: 0x7f07000a
+			public const int validateButton = 2131165194;
 			
 			static Id()
 			{
@@ -110,6 +131,9 @@ namespace AndroidApp
 			// aapt resource value: 0x7f030000
 			public const int Main = 2130903040;
 			
+			// aapt resource value: 0x7f030001
+			public const int Validate = 2130903041;
+			
 			static Layout()
 			{
 				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
@@ -126,20 +150,41 @@ namespace AndroidApp
 			// aapt resource value: 0x7f040000
 			public const int ApplicationName = 2130968576;
 			
-			// aapt resource value: 0x7f040003
-			public const int CallButton = 2130968579;
-			
 			// aapt resource value: 0x7f040004
-			public const int CallHistoryButton = 2130968580;
+			public const int Call = 2130968580;
+			
+			// aapt resource value: 0x7f040007
+			public const int CallHistoryButton = 2130968583;
 			
 			// aapt resource value: 0x7f040001
 			public const int CallHistoryTitle = 2130968577;
 			
+			// aapt resource value: 0x7f040005
+			public const int CallTo = 2130968581;
+			
+			// aapt resource value: 0x7f040006
+			public const int CallToNumber = 2130968582;
+			
+			// aapt resource value: 0x7f040003
+			public const int Cancel = 2130968579;
+			
 			// aapt resource value: 0x7f040002
 			public const int ConvertButton = 2130968578;
 			
-			// aapt resource value: 0x7f040005
-			public const int ProvidePhoneNumber = 2130968581;
+			// aapt resource value: 0x7f04000a
+			public const int EmailLabel = 2130968586;
+			
+			// aapt resource value: 0x7f04000b
+			public const int PasswordLabel = 2130968587;
+			
+			// aapt resource value: 0x7f040009
+			public const int ProvidePhoneNumber = 2130968585;
+			
+			// aapt resource value: 0x7f04000c
+			public const int Validate = 2130968588;
+			
+			// aapt resource value: 0x7f040008
+			public const int ValidateActivity = 2130968584;
 			
 			static String()
 			{

@@ -31,7 +31,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/callButton"
-        android:text="@string/CallButton"
+        android:text="@string/Call"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp" />
     <Button
@@ -42,12 +42,11 @@
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         android:enabled="false" />
-    <TextView
+    <Button
+        android:text="@string/ValidateActivity"
         android:layout_width="match_parent"
-        android:layout_height="240.0dp"
-        android:id="@+id/txtResult"
-        android:layout_margin="50dp"
-        android:textSize="20dp"
-        android:textStyle="bold"
-        android:textColor="@android:color/holo_red_dark" />
+        android:layout_height="wrap_content"
+        android:id="@+id/validateActivityButton"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp" />
 </LinearLayout>

@@ -3,7 +3,14 @@
   <string name="ApplicationName">Android App</string>
   <string name="CallHistoryTitle">Historial de llamadas</string>
   <string name="ConvertButton">Convertir</string>
-  <string name="CallButton">Llamar</string>
+  <string name="Cancel">Cancelar</string>
+  <string name="Call">Llamar</string>
+  <string name="CallTo">Llamar al</string>
+  <string name="CallToNumber">Llamar al número</string>
   <string name="CallHistoryButton">Historial de llamadas</string>
+  <string name="ValidateActivity">Validar actividad</string>
   <string name="ProvidePhoneNumber">Proporciona un número de teléfono</string>
+  <string name="EmailLabel">Correo:</string>
+  <string name="PasswordLabel">Contraseña:</string>
+  <string name="Validate">Validar</string>
 </resources>

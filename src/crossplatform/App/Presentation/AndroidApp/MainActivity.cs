@@ -1,7 +1,6 @@
 ﻿using Android.App;
 using Android.Widget;
 using Android.OS;
-using SALLab06;
 using PCL.Interfaces;
 using AndroidApp.PlatformSpecific;
 using PCL.Helpers;
@@ -13,9 +12,8 @@ namespace AndroidApp
     public class MainActivity : Activity
     {
         string translatedNumber = string.Empty;
-        TextView txtResult;
         EditText phoneNumberText;
-        Button translateButton, callButton, callHistoryButton;
+        Button translateButton, callButton, callHistoryButton, validateActivityButton;
         CurrentPlatform currentPlatform;
         PhoneTranslator translator = new PhoneTranslator();
         static readonly System.Collections.Generic.List<string> phoneNumbers = new System.Collections.Generic.List<string>();
@@ -29,28 +27,31 @@ namespace AndroidApp
 
             SetContentView(Resource.Layout.Main);
             this.Initialize();
-
-            currentPlatform = new CurrentPlatform(new MessageDialog(this));
-
-            //Example to validate authentication
-            this.ValidateTiCapacitacionAccount();
-
-            //Show the path of a file
-            this.ShowFilePath("database.db");
         }
 
         private void Initialize()
         {
+            currentPlatform = new CurrentPlatform(new MessageDialog(this));
             phoneNumberText = FindViewById<EditText>(Resource.Id.phoneNumberText);
             translateButton = FindViewById<Button>(Resource.Id.translateButton);
             callButton = FindViewById<Button>(Resource.Id.callButton);
             callHistoryButton = FindViewById<Button>(Resource.Id.callHistoryButton);
-            txtResult = FindViewById<TextView>(Resource.Id.txtResult);
+            validateActivityButton = FindViewById<Button>(Resource.Id.validateActivityButton);
 
             callButton.Enabled = false;
             translateButton.Click += TranslateButton_Click;
             callButton.Click += CallButton_Click;
             callHistoryButton.Click += CallHistoryButton_Click;
+            validateActivityButton.Click += ValidateActivityButton_Click;
+
+            //Show the path of a file
+            this.ShowFilePath("database.db");
+        }
+
+        private void ValidateActivityButton_Click(object sender, EventArgs e)
+        {
+            var newValidateActivityIntent = new Android.Content.Intent(this, typeof(ValidateActivity));
+            StartActivity(newValidateActivityIntent);
         }
 
         private void CallHistoryButton_Click(object sender, EventArgs e)
@@ -63,7 +64,7 @@ namespace AndroidApp
         private void CallButton_Click(object sender, EventArgs e)
         {
             currentPlatform.Dialog.ShowMessage(
-                $"Llamar al número {translatedNumber}?", null, "Llamar",
+                $"{this.Resources.GetString(Resource.String.CallToNumber)} {translatedNumber}?", null, this.Resources.GetString(Resource.String.Call),
                 delegate
                 {
                     phoneNumbers.Add(translatedNumber);
@@ -72,7 +73,7 @@ namespace AndroidApp
                     callIntent.SetData(Android.Net.Uri.Parse($"tel:{translatedNumber}"));
                     StartActivity(callIntent);
                 },
-                "Cancelar"
+                this.Resources.GetString(Resource.String.Cancel)
             );
         }
 
@@ -81,28 +82,14 @@ namespace AndroidApp
             translatedNumber = translator.ToNumber(phoneNumberText.Text);
             if (string.IsNullOrWhiteSpace(translatedNumber))
             {
-                callButton.Text = "Llamar";
+                callButton.Text = this.Resources.GetString(Resource.String.Call);
                 callButton.Enabled = false;
             }
             else
             {
-                callButton.Text = $"Llamar al {translatedNumber}";
+                callButton.Text = $"{this.Resources.GetString(Resource.String.CallTo)} {translatedNumber}";
                 callButton.Enabled = true;
             }
-        }
-
-        async void ValidateTiCapacitacionAccount()
-        {
-            var serviceClient = new ServiceClient();
-            string studentEmail = "jdnichollsc@hotmail.com";
-            string password = "...";
-
-            string deviceId = Android.Provider.Settings.Secure.GetString(ContentResolver, Android.Provider.Settings.Secure.AndroidId);
-
-            var result = await serviceClient.ValidateAsync(studentEmail, password, deviceId);
-
-            txtResult.Text = $"{result.Status}\n{result.Fullname}\n{result.Token}";
-            //currentPlatform.Dialog.ShowMessage("Result", $"{result.Status}\n{result.Fullname}\n{result.Token}");
         }
 
         void ShowFilePath(string fileName)
