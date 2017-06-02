@@ -75,7 +75,7 @@ We can identify some compilation symbols for shared projects:
 #endif
 var path = Path.Combine(libraryPath, fileName);
 ```
->You can specify platform versions, for example: `__ANDROID_22__`. Also you can create your own conditional compilation symbols from **Project Properties/Build** section.
+> **Note:** You can specify platform versions, for example: `__ANDROID_22__`. Also you can create your own conditional compilation symbols from **Project Properties/Build** section.
 
 ## Remote Login for Mac
 
