@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="Hello">Hello World, Click Me!</string>
-    <string name="ApplicationName">Android</string>
+  <string name="Hello">Hello World, Click Me!</string>
+  <string name="ApplicationName">Android App</string>
+  <string name="ConvertLabel">Convertir</string>
+  <string name="CallLabel">Llamar</string>
+  <string name="ProvidePhoneNumber">Proporciona un número de teléfono</string>
 </resources>

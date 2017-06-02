@@ -4,7 +4,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
     <TextView
-        android:text="Provide a phone number"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -12,16 +11,17 @@
         android:textAlignment="center"
         android:gravity="center"
         android:textColor="@android:color/black"
-        android:layout_marginTop="10dp" />
+        android:layout_marginTop="10dp"
+        android:text="@string/ProvidePhoneNumber" />
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/phoneNumberText"
         android:text="1-855-XAMARIN"
         android:textColor="@android:color/background_dark"
-        android:layout_margin="10dp"/>
+        android:layout_margin="10dp" />
     <Button
-        android:text="Convertir"
+        android:text="@string/ConvertLabel"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/translateButton"
@@ -31,7 +31,15 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/callButton"
-        android:text="Llamar"
+        android:text="@string/CallLabel"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="240.0dp"
+        android:id="@+id/txtResult"
+        android:layout_margin="50dp"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:textColor="@android:color/holo_red_dark" />
 </LinearLayout>

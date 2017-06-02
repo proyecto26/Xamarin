@@ -9,10 +9,11 @@ using System;
 
 namespace Android
 {
-    [Activity(Label = "Android App", MainLauncher = true, Icon = "@drawable/icon")]
+    [Activity(Label = "@string/ApplicationName", MainLauncher = true, Icon = "@drawable/Icon")]
     public class MainActivity : Activity
     {
         string translatedNumber = string.Empty;
+        TextView txtResult;
         EditText phoneNumberText;
         Button translateButton, callButton;
         CurrentPlatform currentPlatform;
@@ -22,13 +23,16 @@ namespace Android
         {
             base.OnCreate(bundle);
 
+            //Change the icon at runtime
+            //this.ActionBar.SetIcon(Android.Resource.Drawable.Icon);
+
             SetContentView(Resource.Layout.Main);
             this.Initialize();
 
             currentPlatform = new CurrentPlatform(new MessageDialog(this));
 
             //Example to validate authentication
-            this.ValidateTiCapacitacionAccount();
+            //this.ValidateTiCapacitacionAccount();
 
             //Show the path of a file
             this.ShowFilePath("database.db");
@@ -39,6 +43,7 @@ namespace Android
             phoneNumberText = FindViewById<EditText>(Resource.Id.phoneNumberText);
             translateButton = FindViewById<Button>(Resource.Id.translateButton);
             callButton = FindViewById<Button>(Resource.Id.callButton);
+            txtResult = FindViewById<TextView>(Resource.Id.txtResult);
 
             callButton.Enabled = false;
             translateButton.Click += TranslateButton_Click;
@@ -84,7 +89,8 @@ namespace Android
 
             var result = await serviceClient.ValidateAsync(studentEmail, password, deviceId);
 
-            currentPlatform.Dialog.ShowMessage("Result", $"{result.Status}\n{result.Fullname}\n{result.Token}");
+            txtResult.Text = $"{result.Status}\n{result.Fullname}\n{result.Token}";
+            //currentPlatform.Dialog.ShowMessage("Result", $"{result.Status}\n{result.Fullname}\n{result.Token}");
         }
 
         void ShowFilePath(string fileName)
@@ -93,6 +99,18 @@ namespace Android
             new AlertDialog.Builder(this)
                 .SetMessage(Utilities.GetFilePath(fileName))
                 .Show();
+        }
+
+        protected override void OnResume()
+        {
+            base.OnResume();
+            //Your code when the app resumes
+        }
+
+        protected override void OnPause()
+        {
+            base.OnPause();
+            //Your code when the app is paused
         }
     }
 }
