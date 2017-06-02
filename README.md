@@ -58,18 +58,6 @@ if(Device.OS == TargetPlatform.iOS){
 
 # Tips
 
-## Remote Login for Mac
-
-- Enable **Remote Login** option on Mac:
-
-  **System Preferences** => **Sharing** => **Remote Login** (Configure access)
-
-- Connect to Mac:
-  
-  **Visual Studio** => **Tools** => **Options** => **Xamarin** => **iOS Settings** => **Find Xamarin Mac Agent**
-  
-> **Note:** A **SSH key** will be created and registered in the file **authorized_keys** on the **Mac**.
-
 ## Conditional Compilation for shared resources
 We can identify some compilation symbols for shared projects:
 - __MOBILE__ (Android and iOS platforms)
@@ -87,6 +75,19 @@ We can identify some compilation symbols for shared projects:
 #endif
 var path = Path.Combine(libraryPath, fileName);
 ```
+>You can specify platform versions, for example: `__ANDROID_22__`. Also you can create your own conditional compilation symbols from **Project Properties/Build** section.
+
+## Remote Login for Mac
+
+- Enable **Remote Login** option on Mac:
+
+  **System Preferences** => **Sharing** => **Remote Login** (Configure access)
+
+- Connect to Mac:
+  
+  **Visual Studio** => **Tools** => **Options** => **Xamarin** => **iOS Settings** => **Find Xamarin Mac Agent**
+  
+> **Note:** A **SSH key** will be created and registered in the file **authorized_keys** on the **Mac**.
 
 # Happy coding
 Made with <3
