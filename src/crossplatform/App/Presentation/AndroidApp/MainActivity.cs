@@ -1,13 +1,13 @@
 ﻿using Android.App;
 using Android.Widget;
 using Android.OS;
-using SALLab05;
+using SALLab06;
 using PCL.Interfaces;
-using Android.PlatformSpecific;
+using AndroidApp.PlatformSpecific;
 using PCL.Helpers;
 using System;
 
-namespace Android
+namespace AndroidApp
 {
     [Activity(Label = "@string/ApplicationName", MainLauncher = true, Icon = "@drawable/Icon")]
     public class MainActivity : Activity
@@ -15,9 +15,10 @@ namespace Android
         string translatedNumber = string.Empty;
         TextView txtResult;
         EditText phoneNumberText;
-        Button translateButton, callButton;
+        Button translateButton, callButton, callHistoryButton;
         CurrentPlatform currentPlatform;
         PhoneTranslator translator = new PhoneTranslator();
+        static readonly System.Collections.Generic.List<string> phoneNumbers = new System.Collections.Generic.List<string>();
 
         protected override void OnCreate(Bundle bundle)
         {
@@ -32,7 +33,7 @@ namespace Android
             currentPlatform = new CurrentPlatform(new MessageDialog(this));
 
             //Example to validate authentication
-            //this.ValidateTiCapacitacionAccount();
+            this.ValidateTiCapacitacionAccount();
 
             //Show the path of a file
             this.ShowFilePath("database.db");
@@ -43,11 +44,20 @@ namespace Android
             phoneNumberText = FindViewById<EditText>(Resource.Id.phoneNumberText);
             translateButton = FindViewById<Button>(Resource.Id.translateButton);
             callButton = FindViewById<Button>(Resource.Id.callButton);
+            callHistoryButton = FindViewById<Button>(Resource.Id.callHistoryButton);
             txtResult = FindViewById<TextView>(Resource.Id.txtResult);
 
             callButton.Enabled = false;
             translateButton.Click += TranslateButton_Click;
             callButton.Click += CallButton_Click;
+            callHistoryButton.Click += CallHistoryButton_Click;
+        }
+
+        private void CallHistoryButton_Click(object sender, EventArgs e)
+        {
+            var newCallHistoryIntent = new Android.Content.Intent(this, typeof(CallHistoryActivity));
+            newCallHistoryIntent.PutStringArrayListExtra("phone_numbers", phoneNumbers);
+            StartActivity(newCallHistoryIntent);
         }
 
         private void CallButton_Click(object sender, EventArgs e)
@@ -56,6 +66,8 @@ namespace Android
                 $"Llamar al número {translatedNumber}?", null, "Llamar",
                 delegate
                 {
+                    phoneNumbers.Add(translatedNumber);
+                    callHistoryButton.Enabled = true;
                     var callIntent = new Android.Content.Intent(Android.Content.Intent.ActionCall);
                     callIntent.SetData(Android.Net.Uri.Parse($"tel:{translatedNumber}"));
                     StartActivity(callIntent);

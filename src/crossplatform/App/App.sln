@@ -13,7 +13,7 @@ Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "SharedProject", "SharedProj
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{CA2C2104-D68A-4313-ADB7-7C2B5AD9F392}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Android", "Presentation\Android\Android.csproj", "{8D0B9975-B0D9-4B19-9C52-5059F73AB224}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AndroidApp", "Presentation\AndroidApp\AndroidApp.csproj", "{8D0B9975-B0D9-4B19-9C52-5059F73AB224}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iOS", "Presentation\iOS\iOS.csproj", "{2DFF95E1-B7C0-417E-81FE-9AF6CA4627EF}"
 EndProject

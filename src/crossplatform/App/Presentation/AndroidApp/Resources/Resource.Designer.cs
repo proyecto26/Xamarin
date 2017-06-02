@@ -9,9 +9,9 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: global::Android.Runtime.ResourceDesignerAttribute("Android.Resource", IsApplication=true)]
+[assembly: global::Android.Runtime.ResourceDesignerAttribute("AndroidApp.Resource", IsApplication=true)]
 
-namespace Android
+namespace AndroidApp
 {
 	
 	
@@ -79,6 +79,9 @@ namespace Android
 			// aapt resource value: 0x7f070003
 			public const int callButton = 2131165187;
 			
+			// aapt resource value: 0x7f070004
+			public const int callHistoryButton = 2131165188;
+			
 			// aapt resource value: 0x7f070001
 			public const int phoneNumberText = 2131165185;
 			
@@ -88,8 +91,8 @@ namespace Android
 			// aapt resource value: 0x7f070002
 			public const int translateButton = 2131165186;
 			
-			// aapt resource value: 0x7f070004
-			public const int txtResult = 2131165188;
+			// aapt resource value: 0x7f070005
+			public const int txtResult = 2131165189;
 			
 			static Id()
 			{
@@ -120,20 +123,23 @@ namespace Android
 		public partial class String
 		{
 			
-			// aapt resource value: 0x7f040001
-			public const int ApplicationName = 2130968577;
+			// aapt resource value: 0x7f040000
+			public const int ApplicationName = 2130968576;
 			
 			// aapt resource value: 0x7f040003
-			public const int CallLabel = 2130968579;
-			
-			// aapt resource value: 0x7f040002
-			public const int ConvertLabel = 2130968578;
-			
-			// aapt resource value: 0x7f040000
-			public const int Hello = 2130968576;
+			public const int CallButton = 2130968579;
 			
 			// aapt resource value: 0x7f040004
-			public const int ProvidePhoneNumber = 2130968580;
+			public const int CallHistoryButton = 2130968580;
+			
+			// aapt resource value: 0x7f040001
+			public const int CallHistoryTitle = 2130968577;
+			
+			// aapt resource value: 0x7f040002
+			public const int ConvertButton = 2130968578;
+			
+			// aapt resource value: 0x7f040005
+			public const int ProvidePhoneNumber = 2130968581;
 			
 			static String()
 			{

@@ -11,7 +11,7 @@ using Android.Views;
 using Android.Widget;
 using PCL.Interfaces;
 
-namespace Android.PlatformSpecific
+namespace AndroidApp.PlatformSpecific
 {
     public class MessageDialog : IMessageDialog
     {

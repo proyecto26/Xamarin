@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="ApplicationName">Android App</string>
+  <string name="CallHistoryTitle">Historial de llamadas</string>
+  <string name="ConvertButton">Convertir</string>
+  <string name="CallButton">Llamar</string>
+  <string name="CallHistoryButton">Historial de llamadas</string>
+  <string name="ProvidePhoneNumber">Proporciona un número de teléfono</string>
+</resources>

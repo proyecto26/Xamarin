@@ -21,7 +21,7 @@
         android:textColor="@android:color/background_dark"
         android:layout_margin="10dp" />
     <Button
-        android:text="@string/ConvertLabel"
+        android:text="@string/ConvertButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/translateButton"
@@ -31,9 +31,17 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/callButton"
-        android:text="@string/CallLabel"
+        android:text="@string/CallButton"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp" />
+    <Button
+        android:text="@string/CallHistoryButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/callHistoryButton"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:enabled="false" />
     <TextView
         android:layout_width="match_parent"
         android:layout_height="240.0dp"
