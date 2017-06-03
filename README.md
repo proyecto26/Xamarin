@@ -58,6 +58,18 @@ if(Device.OS == TargetPlatform.iOS){
 
 # Tips
 
+## Check the support of the APIs at runtime
+We can detect the current version of Android to validate the **APIs** that we can use and support old Android platforms (Android fragmentation):
+```c#
+if(Android.OS.Build.VERSION.SdkInt >= BuildVersionCodes.Lollipop){
+  var builder = new Notification.Builder(this);
+  builder.SetCategory(Notification.CategoryMessage);
+}
+else{
+  new AlertDialog.Builder(this).SetMessage("Your Android version doesn't support...")
+}
+```
+
 ## Conditional Compilation for shared resources
 We can identify some compilation symbols for shared projects:
 - __MOBILE__ (Android and iOS platforms)
