@@ -3,6 +3,7 @@
   <string name="ApplicationName">Android App</string>
   <string name="CallHistoryTitle">Historial de llamadas</string>
   <string name="ConvertButton">Convertir</string>
+  <string name="Ok">Ok</string>
   <string name="Cancel">Cancelar</string>
   <string name="Call">Llamar</string>
   <string name="CallTo">Llamar al</string>

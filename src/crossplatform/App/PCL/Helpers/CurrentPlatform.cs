@@ -13,7 +13,9 @@ namespace PCL.Helpers
         public CurrentPlatform(IMessageDialog platformDialog)
         {
             Dialog = platformDialog;
-            Dialog.ShowMessage("Hello world!", null, null, null, null, (s, ev) => { throw new Exception("LOL"); });
+
+            //Show a dialog in the current platform
+            //Dialog.ShowMessage("Hello world!", null, null, null, null, (s, ev) => { throw new Exception("LOL"); });
         }
     }
 }

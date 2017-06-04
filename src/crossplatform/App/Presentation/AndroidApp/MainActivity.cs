@@ -5,11 +5,13 @@ using PCL.Interfaces;
 using AndroidApp.PlatformSpecific;
 using PCL.Helpers;
 using System;
+using Android.Support.V7.App;
+using Toolbar = Android.Support.V7.Widget.Toolbar;
 
 namespace AndroidApp
 {
     [Activity(Label = "@string/ApplicationName", MainLauncher = true, Icon = "@drawable/Icon")]
-    public class MainActivity : Activity
+    public class MainActivity : AppCompatActivity
     {
         string translatedNumber = string.Empty;
         EditText phoneNumberText;
@@ -26,6 +28,10 @@ namespace AndroidApp
             //this.ActionBar.SetIcon(Android.Resource.Drawable.Icon);
 
             SetContentView(Resource.Layout.Main);
+            var toolbar = FindViewById<Toolbar>(Resource.Id.toolbar);
+            SetSupportActionBar(toolbar);
+            toolbar.SetTitle(Resource.String.ApplicationName);
+
             this.Initialize();
         }
 
@@ -95,7 +101,7 @@ namespace AndroidApp
         void ShowFilePath(string fileName)
         {
             var Utilities = new SharedProject.Utilities();
-            new AlertDialog.Builder(this)
+            new Android.App.AlertDialog.Builder(this)
                 .SetMessage(Utilities.GetFilePath(fileName))
                 .Show();
         }

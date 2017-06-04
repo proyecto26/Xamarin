@@ -28,10 +28,10 @@ namespace AndroidApp.PlatformSpecific
             alert.SetTitle(title);
             alert.SetIcon(Resource.Drawable.Icon);
             alert.SetMessage(message);
-            alert.SetButton(okText ?? "Ok", (s, ev) => { okHandler?.Invoke(s, ev); });
+            alert.SetButton(okText ?? appContext.Resources.GetString(Resource.String.Ok), (s, ev) => { okHandler?.Invoke(s, ev); });
             if(cancelText != null || cancelHandler != null)
             {
-                alert.SetButton2(cancelText ?? "Cancel", (s, ev) => { cancelHandler?.Invoke(s, ev); });
+                alert.SetButton2(cancelText ?? appContext.Resources.GetString(Resource.String.Cancel), (s, ev) => { cancelHandler?.Invoke(s, ev); });
             }
             alert.Show();
         }
