@@ -16,32 +16,40 @@
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/welcome"
+            android:id="@+id/textView"
             android:textAlignment="center"
             android:gravity="center"
             android:textColor="@android:color/black"
             android:layout_marginTop="10dp"
-            android:text="@string/Welcome" />
-        <Button
-            android:text="@string/Calls"
+            android:text="@string/ProvidePhoneNumber" />
+        <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/callsButton"
+            android:id="@+id/phoneNumberText"
+            android:text="1-855-XAMARIN"
+            android:textColor="@android:color/background_dark"
+            android:layout_margin="10dp" />
+        <Button
+            android:text="@string/ConvertButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/translateButton"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp" />
         <Button
-            android:text="@string/ManageResources"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/manageResourcesButton"
+            android:id="@+id/callButton"
+            android:text="@string/Call"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp" />
         <Button
-            android:text="@string/ValidateActivity"
+            android:text="@string/CallHistoryButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/validateActivityButton"
+            android:id="@+id/callHistoryButton"
             android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp" />
+            android:layout_marginRight="10dp"
+            android:enabled="false" />
     </LinearLayout>
 </RelativeLayout>

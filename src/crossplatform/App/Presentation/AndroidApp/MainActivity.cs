@@ -13,12 +13,8 @@ namespace AndroidApp
     [Activity(Label = "@string/ApplicationName", MainLauncher = true, Icon = "@drawable/Icon")]
     public class MainActivity : AppCompatActivity
     {
-        string translatedNumber = string.Empty;
-        EditText phoneNumberText;
-        Button translateButton, callButton, callHistoryButton, validateActivityButton;
+        Button validateActivityButton, callsButton, manageResourcesButton;
         CurrentPlatform currentPlatform;
-        PhoneTranslator translator = new PhoneTranslator();
-        static readonly System.Collections.Generic.List<string> phoneNumbers = new System.Collections.Generic.List<string>();
 
         protected override void OnCreate(Bundle bundle)
         {
@@ -30,7 +26,6 @@ namespace AndroidApp
             SetContentView(Resource.Layout.Main);
             var toolbar = FindViewById<Toolbar>(Resource.Id.toolbar);
             SetSupportActionBar(toolbar);
-            toolbar.SetTitle(Resource.String.ApplicationName);
 
             this.Initialize();
         }
@@ -38,64 +33,31 @@ namespace AndroidApp
         private void Initialize()
         {
             currentPlatform = new CurrentPlatform(new MessageDialog(this));
-            phoneNumberText = FindViewById<EditText>(Resource.Id.phoneNumberText);
-            translateButton = FindViewById<Button>(Resource.Id.translateButton);
-            callButton = FindViewById<Button>(Resource.Id.callButton);
-            callHistoryButton = FindViewById<Button>(Resource.Id.callHistoryButton);
             validateActivityButton = FindViewById<Button>(Resource.Id.validateActivityButton);
+            callsButton = FindViewById<Button>(Resource.Id.callsButton);
+            manageResourcesButton = FindViewById<Button>(Resource.Id.manageResourcesButton);
 
-            callButton.Enabled = false;
-            translateButton.Click += TranslateButton_Click;
-            callButton.Click += CallButton_Click;
-            callHistoryButton.Click += CallHistoryButton_Click;
+            callsButton.Click += CallsButton_Click;
+            manageResourcesButton.Click += ManageResourcesButton_Click;
             validateActivityButton.Click += ValidateActivityButton_Click;
 
             //Show the path of a file
             this.ShowFilePath("database.db");
         }
 
+        private void ManageResourcesButton_Click(object sender, EventArgs e)
+        {
+            StartActivity(new Android.Content.Intent(this, typeof(ManageResourcesActivity)));
+        }
+
+        private void CallsButton_Click(object sender, EventArgs e)
+        {
+            StartActivity(new Android.Content.Intent(this, typeof(CallsActivity)));
+        }
+
         private void ValidateActivityButton_Click(object sender, EventArgs e)
         {
-            var newValidateActivityIntent = new Android.Content.Intent(this, typeof(ValidateActivity));
-            StartActivity(newValidateActivityIntent);
-        }
-
-        private void CallHistoryButton_Click(object sender, EventArgs e)
-        {
-            var newCallHistoryIntent = new Android.Content.Intent(this, typeof(CallHistoryActivity));
-            newCallHistoryIntent.PutStringArrayListExtra("phone_numbers", phoneNumbers);
-            StartActivity(newCallHistoryIntent);
-        }
-
-        private void CallButton_Click(object sender, EventArgs e)
-        {
-            currentPlatform.Dialog.ShowMessage(
-                $"{this.Resources.GetString(Resource.String.CallToNumber)} {translatedNumber}?", null, this.Resources.GetString(Resource.String.Call),
-                delegate
-                {
-                    phoneNumbers.Add(translatedNumber);
-                    callHistoryButton.Enabled = true;
-                    var callIntent = new Android.Content.Intent(Android.Content.Intent.ActionCall);
-                    callIntent.SetData(Android.Net.Uri.Parse($"tel:{translatedNumber}"));
-                    StartActivity(callIntent);
-                },
-                this.Resources.GetString(Resource.String.Cancel)
-            );
-        }
-
-        private void TranslateButton_Click(object sender, EventArgs e)
-        {
-            translatedNumber = translator.ToNumber(phoneNumberText.Text);
-            if (string.IsNullOrWhiteSpace(translatedNumber))
-            {
-                callButton.Text = this.Resources.GetString(Resource.String.Call);
-                callButton.Enabled = false;
-            }
-            else
-            {
-                callButton.Text = $"{this.Resources.GetString(Resource.String.CallTo)} {translatedNumber}";
-                callButton.Enabled = true;
-            }
+            StartActivity(new Android.Content.Intent(this, typeof(ValidateActivity)));
         }
 
         void ShowFilePath(string fileName)

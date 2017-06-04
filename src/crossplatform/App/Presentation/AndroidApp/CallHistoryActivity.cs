@@ -14,7 +14,7 @@ using Toolbar = Android.Support.V7.Widget.Toolbar;
 
 namespace AndroidApp
 {
-    [Activity(Label = "@string/CallHistoryTitle")]
+    [Activity]
     public class CallHistoryActivity : ListActivity
     {
         protected override void OnCreate(Bundle savedInstanceState)

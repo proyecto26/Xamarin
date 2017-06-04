@@ -29,7 +29,6 @@ namespace AndroidApp
             SetContentView(Resource.Layout.Validate);
             var toolbar = FindViewById<Toolbar>(Resource.Id.toolbar);
             SetSupportActionBar(toolbar);
-            toolbar.SetTitle(Resource.String.ValidateActivity);
 
             resultText = FindViewById<TextView>(Resource.Id.resultText);
             emailText = FindViewById<EditText>(Resource.Id.emailText);

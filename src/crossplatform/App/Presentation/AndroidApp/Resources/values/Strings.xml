@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
   <string name="ApplicationName">Android App</string>
+  <string name="UserName">Nombre de usuario</string>
+  <string name="Welcome">Bienvenido</string>
+  <string name="Calls">Llamadas</string>
+  <string name="ManageResources">Manejo de recursos</string>
   <string name="CallHistoryTitle">Historial de llamadas</string>
   <string name="ConvertButton">Convertir</string>
   <string name="Ok">Ok</string>
