@@ -2,6 +2,8 @@
 <resources>
   <string name="ApplicationName">Android App</string>
   <string name="UserName">Nombre de usuario</string>
+  <string name="Status">Estatus</string>
+  <string name="Token">Código</string>
   <string name="Welcome">Bienvenido</string>
   <string name="Calls">Llamadas</string>
   <string name="ManageResources">Manejo de recursos</string>

@@ -13,18 +13,60 @@
       android:id="@+id/main_content"
       android:layout_below="@id/toolbar">
     <ImageView
-      android:src="@drawable/header_image"
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:id="@+id/headerImageView"></ImageView>
+        android:src="@drawable/logo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/headerImageView" />
     <TextView
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:id="@+id/userNameTextView"
-      android:textColor="@android:color/black"
-      android:layout_marginTop="10dp"
-      android:text="@string/UserName"
-      android:layout_marginLeft="10dp"
-      android:layout_marginRight="10dp" />
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/userNameLabel"
+        android:textColor="@android:color/black"
+        android:layout_marginTop="10dp"
+        android:text="@string/UserName"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp" />
+    <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:id="@+id/userNameTextView"
+          android:textColor="@android:color/holo_red_dark"
+          android:text="userName"
+          android:layout_marginLeft="10dp"
+          android:layout_marginRight="10dp" />
+    <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:id="@+id/statusLabel"
+          android:textColor="@android:color/black"
+          android:layout_marginTop="10dp"
+          android:text="@string/Status"
+          android:layout_marginLeft="10dp"
+          android:layout_marginRight="10dp" />
+    <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:id="@+id/statusTextView"
+          android:textColor="@android:color/holo_red_dark"
+          android:text="Success"
+          android:layout_marginLeft="10dp"
+          android:layout_marginRight="10dp" />
+    <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:id="@+id/tokenLabel"
+          android:textColor="@android:color/black"
+          android:layout_marginTop="10dp"
+          android:text="@string/Token"
+          android:layout_marginLeft="10dp"
+          android:layout_marginRight="10dp" />
+    <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:id="@+id/tokenTextView"
+          android:textColor="@android:color/holo_red_dark"
+          android:text="Bearer ..."
+          android:layout_marginLeft="10dp"
+          android:layout_marginRight="10dp" />
   </LinearLayout>
 </RelativeLayout>

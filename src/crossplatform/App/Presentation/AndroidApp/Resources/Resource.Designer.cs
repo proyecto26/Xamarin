@@ -26,6 +26,8 @@ namespace AndroidApp
 		
 		public static void UpdateIdValues()
 		{
+			global::SALLab09.Resource.String.ApplicationName = global::AndroidApp.Resource.String.ApplicationName;
+			global::SALLab09.Resource.String.Hello = global::AndroidApp.Resource.String.Hello;
 		}
 		
 		public partial class Animation
@@ -1642,10 +1644,10 @@ namespace AndroidApp
 			public const int back = 2130837587;
 			
 			// aapt resource value: 0x7f020054
-			public const int header_image = 2130837588;
+			public const int Icon = 2130837588;
 			
 			// aapt resource value: 0x7f020055
-			public const int Icon = 2130837589;
+			public const int logo = 2130837589;
 			
 			// aapt resource value: 0x7f020056
 			public const int notification_action_background = 2130837590;
@@ -1696,8 +1698,8 @@ namespace AndroidApp
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f060067
-			public const int action0 = 2131099751;
+			// aapt resource value: 0x7f06006c
+			public const int action0 = 2131099756;
 			
 			// aapt resource value: 0x7f060048
 			public const int action_bar = 2131099720;
@@ -1720,17 +1722,17 @@ namespace AndroidApp
 			// aapt resource value: 0x7f060025
 			public const int action_bar_title = 2131099685;
 			
-			// aapt resource value: 0x7f060064
-			public const int action_container = 2131099748;
+			// aapt resource value: 0x7f060069
+			public const int action_container = 2131099753;
 			
 			// aapt resource value: 0x7f060049
 			public const int action_context_bar = 2131099721;
 			
-			// aapt resource value: 0x7f06006b
-			public const int action_divider = 2131099755;
+			// aapt resource value: 0x7f060070
+			public const int action_divider = 2131099760;
 			
-			// aapt resource value: 0x7f060065
-			public const int action_image = 2131099749;
+			// aapt resource value: 0x7f06006a
+			public const int action_image = 2131099754;
 			
 			// aapt resource value: 0x7f060003
 			public const int action_menu_divider = 2131099651;
@@ -1747,11 +1749,11 @@ namespace AndroidApp
 			// aapt resource value: 0x7f060027
 			public const int action_mode_close_button = 2131099687;
 			
-			// aapt resource value: 0x7f060066
-			public const int action_text = 2131099750;
+			// aapt resource value: 0x7f06006b
+			public const int action_text = 2131099755;
 			
-			// aapt resource value: 0x7f060074
-			public const int actions = 2131099764;
+			// aapt resource value: 0x7f060079
+			public const int actions = 2131099769;
 			
 			// aapt resource value: 0x7f060028
 			public const int activity_chooser_view_content = 2131099688;
@@ -1783,14 +1785,14 @@ namespace AndroidApp
 			// aapt resource value: 0x7f06005f
 			public const int callsButton = 2131099743;
 			
-			// aapt resource value: 0x7f060068
-			public const int cancel_action = 2131099752;
+			// aapt resource value: 0x7f06006d
+			public const int cancel_action = 2131099757;
 			
 			// aapt resource value: 0x7f06003f
 			public const int checkbox = 2131099711;
 			
-			// aapt resource value: 0x7f060070
-			public const int chronometer = 2131099760;
+			// aapt resource value: 0x7f060075
+			public const int chronometer = 2131099765;
 			
 			// aapt resource value: 0x7f06001f
 			public const int collapseActionView = 2131099679;
@@ -1816,17 +1818,17 @@ namespace AndroidApp
 			// aapt resource value: 0x7f06004a
 			public const int edit_query = 2131099722;
 			
-			// aapt resource value: 0x7f06007b
-			public const int emailLabel = 2131099771;
+			// aapt resource value: 0x7f060080
+			public const int emailLabel = 2131099776;
 			
-			// aapt resource value: 0x7f06007c
-			public const int emailText = 2131099772;
+			// aapt resource value: 0x7f060081
+			public const int emailText = 2131099777;
 			
 			// aapt resource value: 0x7f06001c
 			public const int end = 2131099676;
 			
-			// aapt resource value: 0x7f06007a
-			public const int end_padder = 2131099770;
+			// aapt resource value: 0x7f06007f
+			public const int end_padder = 2131099775;
 			
 			// aapt resource value: 0x7f060029
 			public const int expand_activities_button = 2131099689;
@@ -1846,8 +1848,8 @@ namespace AndroidApp
 			// aapt resource value: 0x7f06002d
 			public const int icon = 2131099693;
 			
-			// aapt resource value: 0x7f060075
-			public const int icon_group = 2131099765;
+			// aapt resource value: 0x7f06007a
+			public const int icon_group = 2131099770;
 			
 			// aapt resource value: 0x7f060020
 			public const int ifRoom = 2131099680;
@@ -1855,17 +1857,17 @@ namespace AndroidApp
 			// aapt resource value: 0x7f06002a
 			public const int image = 2131099690;
 			
-			// aapt resource value: 0x7f060071
-			public const int info = 2131099761;
+			// aapt resource value: 0x7f060076
+			public const int info = 2131099766;
 			
 			// aapt resource value: 0x7f060000
 			public const int item_touch_helper_previous_elevation = 2131099648;
 			
-			// aapt resource value: 0x7f060076
-			public const int line1 = 2131099766;
+			// aapt resource value: 0x7f06007b
+			public const int line1 = 2131099771;
 			
-			// aapt resource value: 0x7f060078
-			public const int line3 = 2131099768;
+			// aapt resource value: 0x7f06007d
+			public const int line3 = 2131099773;
 			
 			// aapt resource value: 0x7f06000a
 			public const int listMode = 2131099658;
@@ -1879,8 +1881,8 @@ namespace AndroidApp
 			// aapt resource value: 0x7f060060
 			public const int manageResourcesButton = 2131099744;
 			
-			// aapt resource value: 0x7f06006a
-			public const int media_actions = 2131099754;
+			// aapt resource value: 0x7f06006f
+			public const int media_actions = 2131099759;
 			
 			// aapt resource value: 0x7f06001d
 			public const int middle = 2131099677;
@@ -1897,23 +1899,23 @@ namespace AndroidApp
 			// aapt resource value: 0x7f06000b
 			public const int normal = 2131099659;
 			
-			// aapt resource value: 0x7f060073
-			public const int notification_background = 2131099763;
+			// aapt resource value: 0x7f060078
+			public const int notification_background = 2131099768;
 			
-			// aapt resource value: 0x7f06006d
-			public const int notification_main_column = 2131099757;
+			// aapt resource value: 0x7f060072
+			public const int notification_main_column = 2131099762;
 			
-			// aapt resource value: 0x7f06006c
-			public const int notification_main_column_container = 2131099756;
+			// aapt resource value: 0x7f060071
+			public const int notification_main_column_container = 2131099761;
 			
 			// aapt resource value: 0x7f060031
 			public const int parentPanel = 2131099697;
 			
-			// aapt resource value: 0x7f06007d
-			public const int passwordLabel = 2131099773;
+			// aapt resource value: 0x7f060082
+			public const int passwordLabel = 2131099778;
 			
-			// aapt resource value: 0x7f06007e
-			public const int passwordText = 2131099774;
+			// aapt resource value: 0x7f060083
+			public const int passwordText = 2131099779;
 			
 			// aapt resource value: 0x7f06005a
 			public const int phoneNumberText = 2131099738;
@@ -1927,14 +1929,14 @@ namespace AndroidApp
 			// aapt resource value: 0x7f060041
 			public const int radio = 2131099713;
 			
-			// aapt resource value: 0x7f060080
-			public const int resultText = 2131099776;
+			// aapt resource value: 0x7f060085
+			public const int resultText = 2131099781;
 			
-			// aapt resource value: 0x7f060072
-			public const int right_icon = 2131099762;
+			// aapt resource value: 0x7f060077
+			public const int right_icon = 2131099767;
 			
-			// aapt resource value: 0x7f06006e
-			public const int right_side = 2131099758;
+			// aapt resource value: 0x7f060073
+			public const int right_side = 2131099763;
 			
 			// aapt resource value: 0x7f060016
 			public const int screen = 2131099670;
@@ -2008,8 +2010,14 @@ namespace AndroidApp
 			// aapt resource value: 0x7f060019
 			public const int src_over = 2131099673;
 			
-			// aapt resource value: 0x7f060069
-			public const int status_bar_latest_event_content = 2131099753;
+			// aapt resource value: 0x7f060065
+			public const int statusLabel = 2131099749;
+			
+			// aapt resource value: 0x7f060066
+			public const int statusTextView = 2131099750;
+			
+			// aapt resource value: 0x7f06006e
+			public const int status_bar_latest_event_content = 2131099758;
 			
 			// aapt resource value: 0x7f060042
 			public const int submenuarrow = 2131099714;
@@ -2020,11 +2028,11 @@ namespace AndroidApp
 			// aapt resource value: 0x7f06000c
 			public const int tabMode = 2131099660;
 			
-			// aapt resource value: 0x7f060079
-			public const int text = 2131099769;
+			// aapt resource value: 0x7f06007e
+			public const int text = 2131099774;
 			
-			// aapt resource value: 0x7f060077
-			public const int text2 = 2131099767;
+			// aapt resource value: 0x7f06007c
+			public const int text2 = 2131099772;
 			
 			// aapt resource value: 0x7f060036
 			public const int textSpacerNoButtons = 2131099702;
@@ -2035,8 +2043,8 @@ namespace AndroidApp
 			// aapt resource value: 0x7f060059
 			public const int textView = 2131099737;
 			
-			// aapt resource value: 0x7f06006f
-			public const int time = 2131099759;
+			// aapt resource value: 0x7f060074
+			public const int time = 2131099764;
 			
 			// aapt resource value: 0x7f06002e
 			public const int title = 2131099694;
@@ -2046,6 +2054,12 @@ namespace AndroidApp
 			
 			// aapt resource value: 0x7f06003b
 			public const int title_template = 2131099707;
+			
+			// aapt resource value: 0x7f060067
+			public const int tokenLabel = 2131099751;
+			
+			// aapt resource value: 0x7f060068
+			public const int tokenTextView = 2131099752;
 			
 			// aapt resource value: 0x7f060057
 			public const int toolbar = 2131099735;
@@ -2066,13 +2080,16 @@ namespace AndroidApp
 			public const int useLogo = 2131099667;
 			
 			// aapt resource value: 0x7f060063
-			public const int userNameTextView = 2131099747;
+			public const int userNameLabel = 2131099747;
+			
+			// aapt resource value: 0x7f060064
+			public const int userNameTextView = 2131099748;
 			
 			// aapt resource value: 0x7f060061
 			public const int validateActivityButton = 2131099745;
 			
-			// aapt resource value: 0x7f06007f
-			public const int validateButton = 2131099775;
+			// aapt resource value: 0x7f060084
+			public const int validateButton = 2131099780;
 			
 			// aapt resource value: 0x7f06005e
 			public const int welcome = 2131099742;
@@ -2290,59 +2307,68 @@ namespace AndroidApp
 		public partial class String
 		{
 			
-			// aapt resource value: 0x7f070021
-			public const int ApplicationName = 2131165217;
-			
-			// aapt resource value: 0x7f07002a
-			public const int Call = 2131165226;
+			// aapt resource value: 0x7f070022
+			public const int ApplicationName = 2131165218;
 			
 			// aapt resource value: 0x7f07002d
-			public const int CallHistoryButton = 2131165229;
-			
-			// aapt resource value: 0x7f070026
-			public const int CallHistoryTitle = 2131165222;
-			
-			// aapt resource value: 0x7f07002b
-			public const int CallTo = 2131165227;
-			
-			// aapt resource value: 0x7f07002c
-			public const int CallToNumber = 2131165228;
-			
-			// aapt resource value: 0x7f070024
-			public const int Calls = 2131165220;
-			
-			// aapt resource value: 0x7f070029
-			public const int Cancel = 2131165225;
-			
-			// aapt resource value: 0x7f070027
-			public const int ConvertButton = 2131165223;
+			public const int Call = 2131165229;
 			
 			// aapt resource value: 0x7f070030
-			public const int EmailLabel = 2131165232;
+			public const int CallHistoryButton = 2131165232;
 			
-			// aapt resource value: 0x7f070025
-			public const int ManageResources = 2131165221;
-			
-			// aapt resource value: 0x7f070028
-			public const int Ok = 2131165224;
-			
-			// aapt resource value: 0x7f070031
-			public const int PasswordLabel = 2131165233;
-			
-			// aapt resource value: 0x7f07002f
-			public const int ProvidePhoneNumber = 2131165231;
-			
-			// aapt resource value: 0x7f070022
-			public const int UserName = 2131165218;
-			
-			// aapt resource value: 0x7f070032
-			public const int Validate = 2131165234;
+			// aapt resource value: 0x7f070029
+			public const int CallHistoryTitle = 2131165225;
 			
 			// aapt resource value: 0x7f07002e
-			public const int ValidateActivity = 2131165230;
+			public const int CallTo = 2131165230;
+			
+			// aapt resource value: 0x7f07002f
+			public const int CallToNumber = 2131165231;
+			
+			// aapt resource value: 0x7f070027
+			public const int Calls = 2131165223;
+			
+			// aapt resource value: 0x7f07002c
+			public const int Cancel = 2131165228;
+			
+			// aapt resource value: 0x7f07002a
+			public const int ConvertButton = 2131165226;
+			
+			// aapt resource value: 0x7f070033
+			public const int EmailLabel = 2131165235;
+			
+			// aapt resource value: 0x7f070021
+			public const int Hello = 2131165217;
+			
+			// aapt resource value: 0x7f070028
+			public const int ManageResources = 2131165224;
+			
+			// aapt resource value: 0x7f07002b
+			public const int Ok = 2131165227;
+			
+			// aapt resource value: 0x7f070034
+			public const int PasswordLabel = 2131165236;
+			
+			// aapt resource value: 0x7f070032
+			public const int ProvidePhoneNumber = 2131165234;
+			
+			// aapt resource value: 0x7f070024
+			public const int Status = 2131165220;
+			
+			// aapt resource value: 0x7f070025
+			public const int Token = 2131165221;
 			
 			// aapt resource value: 0x7f070023
-			public const int Welcome = 2131165219;
+			public const int UserName = 2131165219;
+			
+			// aapt resource value: 0x7f070035
+			public const int Validate = 2131165237;
+			
+			// aapt resource value: 0x7f070031
+			public const int ValidateActivity = 2131165233;
+			
+			// aapt resource value: 0x7f070026
+			public const int Welcome = 2131165222;
 			
 			// aapt resource value: 0x7f070000
 			public const int abc_action_bar_home_description = 2131165184;
