@@ -56,6 +56,18 @@ if(Device.OS == TargetPlatform.iOS){
 }
 ```
 
+# Xamarin.Android
+A Xamarin Android project.
+
+## Alternative resources
+Qualifier    | Description
+----------   | -------------
+**MCC and MNC** | Mobile Country Code and Mobile Network Code. Example: **mcc310-mnc026** (EEUU/T-Mobile). Check the list of codes [here](http://mcc-mnc.com/).
+**Language** | The language code and optionally the region code. Example: **es-rCO** (Spanish/Colombia with 'r' character as separator).
+**Smaller width** | The smallest width supported by the app. Example: **sw320dp** (Height and width of at least 320dp).
+**Width available** | The minimum screen width, this value may change as the device rotates. Example: **w720dp** (Width of at least 720dp).
+**Height available** | 
+
 # Tips
 
 ## Check the support of the APIs at runtime
