@@ -66,7 +66,13 @@ Qualifier    | Description
 **Language** | The language code and optionally the region code. Example: **es-rCO** (Spanish/Colombia with 'r' character as separator).
 **Smaller width** | The smallest width supported by the app. Example: **sw320dp** (Height and width of at least 320dp).
 **Width available** | The minimum screen width, this value may change as the device rotates. Example: **w720dp** (Width of at least 720dp).
-**Height available** | 
+**Height available** | The minimum screen height, this value may change as the device rotates. Example: **h720dp** (Width of at least 720dp).
+**Screen size** | Size for which resources are allocated. Values: **small/normal/large/xlarge**.
+**Screen aspect** | It is based on the aspect ratio. Values: **long/notlong**.
+**Screen orientation** | Portrait (Vertical) and Landscape (Horizontal). Values: **port/land**.
+**Dock mode** | For devices in a Car Dock or Desk Dock. Values: **car/desk**.
+**Night mode** | Manage different versions for day and night. Values: **night/notnight**.
+
 
 # Tips
 
