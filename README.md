@@ -73,8 +73,12 @@ Qualifier    | Description
 **Dock mode** | For devices in a Car Dock or Desk Dock. Values: **car/desk**.
 **Night mode** | Manage different versions for day and night. Values: **night/notnight**.
 **Display pixel density** | The number of pixels in a physical area of the screen. Values: **ldpi/mdpi/hdpi/xhdpi/nodpi/tvdpi**.
-**Touch screen type** | Specifies the type of touchscreen that a device can have. Values: **notouch/stylus/finger** (Non-touch screens, Optical pencil or touch screens).
-
+**Touch screen type** | Specifies the type of touchscreen that a device can have. Values: **notouch/stylus/finger** (Non-touch screens, optical pencil or touch screens).
+**Keyboard availability** | The type of keyboard available. Values: **keysexposed/keyshidden/keyssoft** (Keyboard available, hardware keyboard or software keyboard).
+**Main text input method** | Types of hardware keys available. Values: **nokeys/qwerty/12key** (No hardware keys, qwerty keyboard available or 12-key keyboard hardware).
+**Navigation key availability** | When **5-way** or **d-pad** navigation is available. Values: **navexposed/navhidden** (Available or unavailable).
+**Main non-touch navigation method** | Type of navigation available on the device. Values: **nonav/dpad/trackball/wheel** (Touch screen only, d-pad available, Trackball available or wheels available).
+**Platform version (API Level)** | The API level supported. Example: **v11** (Level 11 - Android 3.0).
 
 # Tips
 
