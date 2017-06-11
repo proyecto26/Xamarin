@@ -43,5 +43,19 @@
             android:id="@+id/validateActivityButton"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp" />
+        <Button
+            android:text="@string/Counter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/counterActivityButton"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp" />
+        <Button
+            android:text="@string/MediaPlayer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/mediaPlayerActivityButton"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp" />
     </LinearLayout>
 </RelativeLayout>

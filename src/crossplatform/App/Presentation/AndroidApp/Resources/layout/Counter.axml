@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+  <include
+      android:id="@+id/toolbar"
+      layout="@layout/toolbar" />
+  <LinearLayout
+      android:orientation="vertical"
+      android:layout_width="fill_parent"
+      android:layout_height="fill_parent"
+      android:id="@+id/main_content"
+      android:layout_below="@id/toolbar">
+    <Button
+        android:text="@string/ClickMe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/clickMeButton"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp" />
+    <TextView
+        android:text="Text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/ClickCounterText"
+        android:layout_margin="10dp"
+        android:textSize="20dp" />
+  </LinearLayout>
+</RelativeLayout>

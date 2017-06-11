@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="ApplicationName">Android App</string>
+  <string name="UserName">Nome de usuário</string>
+  <string name="Status">Status</string>
+  <string name="Token">Código</string>
+  <string name="Welcome">Bem-vindo</string>
+  <string name="Calls">Chamadas</string>
+  <string name="ManageResources">Gestão de recursos</string>
+  <string name="CallHistoryTitle">Histórico de chamadas</string>
+  <string name="ConvertButton">Converter</string>
+  <string name="Ok">Ok</string>
+  <string name="Cancel">Cancelar</string>
+  <string name="Call">Chamada</string>
+  <string name="CallTo">Ligue para</string>
+  <string name="CallToNumber">Chamada para número</string>
+  <string name="CallHistoryButton">Histórico de chamadas</string>
+  <string name="ValidateActivity">Validar a atividade</string>
+  <string name="ProvidePhoneNumber">Ele fornece um número de telefone</string>
+  <string name="EmailLabel">O email:</string>
+  <string name="PasswordLabel">Senha:</string>
+  <string name="Validate">Validar</string>
+  <string name="ClickMe">Clique em mim!</string>
+  <plurals name="numberOfClicks">
+    <item quantity="one">Há %d Clique.</item>
+    <item quantity="other">Há %d Cliques.</item>
+  </plurals>
+  <string name="MediaPlayer">Reprodutor de mídia</string>
+</resources>
