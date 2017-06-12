@@ -57,5 +57,12 @@
             android:id="@+id/mediaPlayerActivityButton"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp" />
+      <Button
+            android:text="@string/ManageAssets"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/manageAssetsActivityButton"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp" />
     </LinearLayout>
 </RelativeLayout>

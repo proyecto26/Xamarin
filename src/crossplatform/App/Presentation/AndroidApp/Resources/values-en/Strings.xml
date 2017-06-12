@@ -26,4 +26,7 @@
     <item quantity="other">There are %d Clicks.</item>
   </plurals>
   <string name="MediaPlayer">Media Player</string>
+  <string name="ManageAssets">Manage Assets</string>
+  <string name="LoadAsset">Load Asset</string>
+  <string name="AndroidLocalization">Android Localization</string>
 </resources>

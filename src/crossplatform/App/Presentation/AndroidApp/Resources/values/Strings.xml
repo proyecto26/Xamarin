@@ -28,4 +28,7 @@
   </plurals>
   <string name="MediaPlayer">Reproductor Multimedia</string>
   <string name="Play">Play</string>
+  <string name="ManageAssets">Manejo de activos</string>
+  <string name="LoadAsset">Cargar archivo</string>
+  <string name="AndroidLocalization">Localización en Android</string>
 </resources>

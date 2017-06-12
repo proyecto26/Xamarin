@@ -26,4 +26,7 @@
     <item quantity="other">Há %d Cliques.</item>
   </plurals>
   <string name="MediaPlayer">Reprodutor de mídia</string>
+  <string name="ManageAssets">Gestão de activos</string>
+  <string name="LoadAsset">Ativo de carga</string>
+  <string name="AndroidLocalization">Localização no Android</string>
 </resources>

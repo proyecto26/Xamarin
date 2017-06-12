@@ -62,6 +62,9 @@
     <Reference Include="SALLab09">
       <HintPath>..\..\..\..\..\..\..\xamarin\SALLab09.dll</HintPath>
     </Reference>
+    <Reference Include="SALLab10">
+      <HintPath>..\..\..\..\..\..\..\xamarin\SALLab10.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Net.Http" />
@@ -105,6 +108,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ManageAssetsActivity.cs" />
     <Compile Include="CallHistoryActivity.cs" />
     <Compile Include="CallsActivity.cs" />
     <Compile Include="CounterActivity.cs" />
@@ -121,7 +125,7 @@
     <None Include="GettingStarted.Xamarin" />
     <None Include="packages.config" />
     <None Include="Resources\AboutResources.txt" />
-    <None Include="Assets\AboutAssets.txt" />
+    <AndroidAsset Include="Assets\demo.txt" />
     <AndroidResource Include="Resources\layout\Validate.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
@@ -141,6 +145,9 @@
       <SubType>Designer</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\layout\MediaPlayer.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\ManageAssets.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>

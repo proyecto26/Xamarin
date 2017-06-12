@@ -13,7 +13,7 @@ namespace AndroidApp
     [Activity(Label = "@string/ApplicationName", MainLauncher = true, Icon = "@drawable/Icon")]
     public class MainActivity : AppCompatActivity
     {
-        Button validateActivityButton, counterActivityButton, callsButton, manageResourcesButton, mediaPlayerActivityButton;
+        Button validateActivityButton, counterActivityButton, callsButton, manageResourcesButton, mediaPlayerActivityButton, manageAssetsActivityButton;
         CurrentPlatform currentPlatform;
 
         protected override void OnCreate(Bundle bundle)
@@ -38,15 +38,22 @@ namespace AndroidApp
             manageResourcesButton = FindViewById<Button>(Resource.Id.manageResourcesButton);
             counterActivityButton = FindViewById<Button>(Resource.Id.counterActivityButton);
             mediaPlayerActivityButton = FindViewById<Button>(Resource.Id.mediaPlayerActivityButton);
+            manageAssetsActivityButton = FindViewById<Button>(Resource.Id.manageAssetsActivityButton);
 
             callsButton.Click += CallsButton_Click;
             manageResourcesButton.Click += ManageResourcesButton_Click;
             validateActivityButton.Click += ValidateActivityButton_Click;
             counterActivityButton.Click += CounterActivityButton_Click;
             mediaPlayerActivityButton.Click += mediaPlayerActivityButton_Click;
+            manageAssetsActivityButton.Click += ManageAssetsActivityButton_Click;
 
             //Show the path of a file
             this.ShowFilePath("database.db");
+        }
+
+        private void ManageAssetsActivityButton_Click(object sender, EventArgs e)
+        {
+            StartActivity(new Android.Content.Intent(this, typeof(ManageAssetsActivity)));
         }
 
         private void mediaPlayerActivityButton_Click(object sender, EventArgs e)

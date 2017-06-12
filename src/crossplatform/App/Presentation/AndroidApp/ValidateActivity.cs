@@ -12,7 +12,7 @@ using Android.Widget;
 using Android.Support.V7.App;
 using Toolbar = Android.Support.V7.Widget.Toolbar;
 
-using SALLab09;
+using SALLab10;
 
 namespace AndroidApp
 {
@@ -63,10 +63,7 @@ namespace AndroidApp
                 var notificationManager = GetSystemService(Android.Content.Context.NotificationService) as NotificationManager;
                 notificationManager.Notify(0, builder.Build());
             }
-            else
-            {
-                resultText.Text = resultMessage;
-            }
+            resultText.Text = resultMessage;
         }
     }
 }

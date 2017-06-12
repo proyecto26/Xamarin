@@ -14,7 +14,7 @@ using Toolbar = Android.Support.V7.Widget.Toolbar;
 
 namespace AndroidApp
 {
-    [Activity(Label = "MediaPlayerActivity")]
+    [Activity(Label = "@string/MediaPlayer")]
     public class MediaPlayerActivity : AppCompatActivity
     {
         Button playButton;
