@@ -28,6 +28,10 @@ namespace AndroidApp
             var toolbar = FindViewById<Toolbar>(Resource.Id.toolbar);
             SetSupportActionBar(toolbar);
 
+            if(savedInstanceState != null)
+            {
+                Counter = savedInstanceState.GetInt("Counter", 0);
+            }
             ClickCounterText = FindViewById<TextView>(Resource.Id.ClickCounterText);
             clickMeButton = FindViewById<Button>(Resource.Id.clickMeButton);
             clickMeButton.Click += ClickMeButton_Click;
@@ -39,6 +43,19 @@ namespace AndroidApp
         {
             Counter++;
             ClickCounterText.Text = Resources.GetQuantityString(Resource.Plurals.numberOfClicks, Counter, Counter);
+        }
+
+        /// <summary>
+        /// Your code when the activity is being destroyed
+        /// </summary>
+        /// <example>
+        /// - Persist key/value information.
+        /// </example>
+        protected override void OnSaveInstanceState(Bundle outState)
+        {
+            outState.PutInt("Counter", Counter);
+
+            base.OnSaveInstanceState(outState);
         }
     }
 }

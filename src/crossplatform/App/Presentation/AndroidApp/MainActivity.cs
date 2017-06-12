@@ -18,10 +18,9 @@ namespace AndroidApp
 
         protected override void OnCreate(Bundle bundle)
         {
-            base.OnCreate(bundle);
+            Android.Util.Log.Debug("AppLog", "Home Activity - OnCreate");
 
-            //Change the icon at runtime
-            //this.ActionBar.SetIcon(Android.Resource.Drawable.Icon);
+            base.OnCreate(bundle);
 
             SetContentView(Resource.Layout.Main);
             var toolbar = FindViewById<Toolbar>(Resource.Id.toolbar);
@@ -46,9 +45,6 @@ namespace AndroidApp
             counterActivityButton.Click += CounterActivityButton_Click;
             mediaPlayerActivityButton.Click += mediaPlayerActivityButton_Click;
             manageAssetsActivityButton.Click += ManageAssetsActivityButton_Click;
-
-            //Show the path of a file
-            this.ShowFilePath("database.db");
         }
 
         private void ManageAssetsActivityButton_Click(object sender, EventArgs e)
@@ -85,20 +81,88 @@ namespace AndroidApp
         {
             var Utilities = new SharedProject.Utilities();
             new Android.App.AlertDialog.Builder(this)
-                .SetMessage(Utilities.GetFilePath(fileName))
+                .SetMessage($"Path file: {Utilities.GetFilePath(fileName)}")
                 .Show();
         }
 
-        protected override void OnResume()
+        /// <summary>
+        /// Your code when the activity starts
+        /// </summary>
+        /// <example>
+        /// - Update variables of views.
+        /// </example>
+        protected override void OnStart()
         {
-            base.OnResume();
-            //Your code when the app resumes
+            Android.Util.Log.Debug("AppLog", "Home Activity - OnCreate");
+            base.OnStart();
         }
 
+        /// <summary>
+        /// Your code when the activity resumes
+        /// </summary>
+        /// <example>
+        /// - Increase frame rate for games.
+        /// - Start animations.
+        /// - Listen to GPS updates.
+        /// - Show alerts and dialogs.
+        /// - Connect to external event handlers.
+        /// </example>
+        protected override void OnResume()
+        {
+            Android.Util.Log.Debug("AppLog", "Home Activity - OnResume");
+            base.OnResume();
+
+            //Show the path of a file
+            this.ShowFilePath("database.db");
+        }
+
+        /// <summary>
+        /// Your code when the activity is paused
+        /// </summary>
+        /// <example>
+        /// - Save pending changes.
+        /// - Destroy objets.
+        /// - Pause animations and reduce frame rate.
+        /// - Diconnect to external event handlers.
+        /// - Dismiss dialogs.
+        /// </example>
         protected override void OnPause()
         {
+            Android.Util.Log.Debug("AppLog", "Home Activity - OnPause");
             base.OnPause();
-            //Your code when the app is paused
+        }
+
+        /// <summary>
+        /// Your code when the activity is stopped
+        /// </summary>
+        /// <example>
+        /// - Destroy objects before the activity is placed in the background.
+        /// </example>
+        protected override void OnStop()
+        {
+            Android.Util.Log.Debug("AppLog", "Home Activity - OnStop");
+            base.OnStop();
+        }
+
+        /// <summary>
+        /// Your code when the activity is destroyed
+        /// </summary>
+        /// <example>
+        /// - End long-running processes (Background threads).
+        /// </example>
+        protected override void OnDestroy()
+        {
+            Android.Util.Log.Debug("AppLog", "Home Activity - OnDestroy");
+            base.OnDestroy();
+        }
+
+        /// <summary>
+        /// Your code when the activity is restarted
+        /// </summary>
+        protected override void OnRestart()
+        {
+            Android.Util.Log.Debug("AppLog", "Home Activity - OnRestart");
+            base.OnRestart();
         }
     }
 }
