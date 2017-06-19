@@ -88,10 +88,12 @@ Qualifier    | Description
 //Find the layout
 var viewGroup = Window.DecorView.FindViewById<ViewGroup>(Android.Resource.Id.Content);
 var mainLayout = viewGroup.FindViewById<LinearLayout>(Resource.Id.main_content);
+
 //Create an image
 var headerImage = new ImageView(this);
 headerImage.SetImageResource(Resource.Drawable.logo);
 mainLayout.AddView(headerImage);
+
 //Create a text area
 var userNameTextView = new TextView(this);
 userNameTextView.Text = GetString(Resource.String.UserName);
@@ -100,7 +102,7 @@ mainLayout.AddView(userNameTextView);
 
 # Tips
 
-## Check the support of the APIs at runtime
+## Check the support of the APIs at runtime - `Xamarin.Android`
 We can detect the current version of Android to validate the **APIs** that we can use and support old Android platforms (Android fragmentation):
 ```c#
 if(Android.OS.Build.VERSION.SdkInt >= BuildVersionCodes.Lollipop){
