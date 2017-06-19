@@ -24,12 +24,12 @@ namespace AndroidApp
         CurrentPlatform currentPlatform;
         Button translateButton, callButton, callHistoryButton;
         PhoneTranslator translator = new PhoneTranslator();
-
-        static readonly System.Collections.Generic.List<string> phoneNumbers = new System.Collections.Generic.List<string>();
+        Calls Data;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
+            
             currentPlatform = new CurrentPlatform(new MessageDialog(this));
 
             SetContentView(Resource.Layout.Calls);
@@ -45,12 +45,24 @@ namespace AndroidApp
             translateButton.Click += TranslateButton_Click;
             callButton.Click += CallButton_Click;
             callHistoryButton.Click += CallHistoryButton_Click;
+
+            Data = this.FragmentManager.FindFragmentByTag("Data") as Calls;
+            if(Data == null)
+            {
+                Data = new Calls {
+                    PhoneNumbers = new List<string>()
+                };
+                var fragmentTransaction = this.FragmentManager.BeginTransaction();
+                fragmentTransaction.Add(Data, "Data");
+                fragmentTransaction.Commit();
+            }
+            callHistoryButton.Enabled = Data.PhoneNumbers.Any();
         }
 
         private void CallHistoryButton_Click(object sender, EventArgs e)
         {
             var newCallHistoryIntent = new Android.Content.Intent(this, typeof(CallHistoryActivity));
-            newCallHistoryIntent.PutStringArrayListExtra("phone_numbers", phoneNumbers);
+            newCallHistoryIntent.PutStringArrayListExtra("phone_numbers", Data.PhoneNumbers);
             StartActivity(newCallHistoryIntent);
         }
 
@@ -60,7 +72,7 @@ namespace AndroidApp
                 $"{this.Resources.GetString(Resource.String.CallToNumber)} {translatedNumber}?", null, this.Resources.GetString(Resource.String.Call),
                 delegate
                 {
-                    phoneNumbers.Add(translatedNumber);
+                    Data.PhoneNumbers.Add(translatedNumber);
                     callHistoryButton.Enabled = true;
                     var callIntent = new Android.Content.Intent(Android.Content.Intent.ActionCall);
                     callIntent.SetData(Android.Net.Uri.Parse($"tel:{translatedNumber}"));

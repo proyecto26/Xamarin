@@ -26,10 +26,8 @@ namespace AndroidApp
 		
 		public static void UpdateIdValues()
 		{
-			global::SALLab09.Resource.String.ApplicationName = global::AndroidApp.Resource.String.ApplicationName;
-			global::SALLab09.Resource.String.Hello = global::AndroidApp.Resource.String.Hello;
-			global::SALLab10.Resource.String.ApplicationName = global::AndroidApp.Resource.String.ApplicationName;
-			global::SALLab10.Resource.String.Hello = global::AndroidApp.Resource.String.Hello;
+			global::SALLab11.Resource.String.ApplicationName = global::AndroidApp.Resource.String.ApplicationName;
+			global::SALLab11.Resource.String.Hello = global::AndroidApp.Resource.String.Hello;
 		}
 		
 		public partial class Animation

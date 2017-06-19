@@ -46,7 +46,7 @@ namespace AndroidApp
         }
 
         /// <summary>
-        /// Your code when the activity is being destroyed
+        /// When the activity is being destroyed
         /// </summary>
         /// <example>
         /// - Persist key/value information.

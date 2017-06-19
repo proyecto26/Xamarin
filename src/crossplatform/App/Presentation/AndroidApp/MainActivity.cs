@@ -86,7 +86,7 @@ namespace AndroidApp
         }
 
         /// <summary>
-        /// Your code when the activity starts
+        /// When the activity starts
         /// </summary>
         /// <example>
         /// - Update variables of views.
@@ -98,7 +98,7 @@ namespace AndroidApp
         }
 
         /// <summary>
-        /// Your code when the activity resumes
+        /// When the activity resumes
         /// </summary>
         /// <example>
         /// - Increase frame rate for games.
@@ -117,7 +117,7 @@ namespace AndroidApp
         }
 
         /// <summary>
-        /// Your code when the activity is paused
+        /// When the activity is paused
         /// </summary>
         /// <example>
         /// - Save pending changes.
@@ -133,7 +133,7 @@ namespace AndroidApp
         }
 
         /// <summary>
-        /// Your code when the activity is stopped
+        /// When the activity is stopped
         /// </summary>
         /// <example>
         /// - Destroy objects before the activity is placed in the background.
@@ -145,7 +145,7 @@ namespace AndroidApp
         }
 
         /// <summary>
-        /// Your code when the activity is destroyed
+        /// When the activity is destroyed
         /// </summary>
         /// <example>
         /// - End long-running processes (Background threads).
@@ -157,7 +157,7 @@ namespace AndroidApp
         }
 
         /// <summary>
-        /// Your code when the activity is restarted
+        /// When the activity is restarted
         /// </summary>
         protected override void OnRestart()
         {

@@ -59,11 +59,8 @@
     <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Newtonsoft.Json.6.0.4\lib\portable-net45+wp80+win8+wpa81\Newtonsoft.Json.dll</HintPath>
     </Reference>
-    <Reference Include="SALLab09">
-      <HintPath>..\..\..\..\..\..\..\xamarin\SALLab09.dll</HintPath>
-    </Reference>
-    <Reference Include="SALLab10">
-      <HintPath>..\..\..\..\..\..\..\xamarin\SALLab10.dll</HintPath>
+    <Reference Include="SALLab11">
+      <HintPath>..\..\..\..\..\..\..\xamarin\SALLab11.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -115,6 +112,7 @@
     <Compile Include="MainActivity.cs" />
     <Compile Include="ManageResourcesActivity.cs" />
     <Compile Include="MediaPlayerActivity.cs" />
+    <Compile Include="Fragments\Calls.cs" />
     <Compile Include="PlatformSpecific\MessageDialog.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

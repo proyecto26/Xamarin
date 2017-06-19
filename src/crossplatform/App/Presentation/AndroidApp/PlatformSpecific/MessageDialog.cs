@@ -10,6 +10,7 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using PCL.Interfaces;
+using AlertDialog = Android.Support.V7.App.AlertDialog;
 
 namespace AndroidApp.PlatformSpecific
 {
@@ -24,16 +25,15 @@ namespace AndroidApp.PlatformSpecific
         public void ShowMessage(string message, string title = null, string okText = null, EventHandler okHandler = null, string cancelText = null, EventHandler cancelHandler = null)
         {
             var builder = new AlertDialog.Builder(appContext);
-            var alert = builder.Create();
-            alert.SetTitle(title);
-            alert.SetIcon(Resource.Drawable.Icon);
-            alert.SetMessage(message);
-            alert.SetButton(okText ?? appContext.Resources.GetString(Resource.String.Ok), (s, ev) => { okHandler?.Invoke(s, ev); });
+            builder.SetTitle(title);
+            builder.SetIcon(Resource.Drawable.Icon);
+            builder.SetMessage(message);
+            builder.SetPositiveButton(okText ?? appContext.Resources.GetString(Resource.String.Ok), (s, ev) => { okHandler?.Invoke(s, ev); });
             if(cancelText != null || cancelHandler != null)
             {
-                alert.SetButton2(cancelText ?? appContext.Resources.GetString(Resource.String.Cancel), (s, ev) => { cancelHandler?.Invoke(s, ev); });
+                builder.SetNegativeButton(cancelText ?? appContext.Resources.GetString(Resource.String.Cancel), (s, ev) => { cancelHandler?.Invoke(s, ev); });
             }
-            alert.Show();
+            builder.Show();
         }
     }
 }
