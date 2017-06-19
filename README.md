@@ -37,7 +37,10 @@ There are some strategies for sharing code between platforms:
 * **Shared Asset Project (SAP)**: Files and source code that are combined at compile time.
 * **Portable Class Library (PCL)**: A **DLL** library that encapsulates common code and can be referenced from other projects.
 
-# XAML
+# Xamarin.Forms
+A Xamaring Forms project summary.
+
+## XAML
 The design of the views is usually developed in XAML:
 ```xaml
 <ContentPage xmlns="..." xmlns:x="..." x:Class="App.MainPage" Title="My App">
@@ -57,7 +60,7 @@ if(Device.OS == TargetPlatform.iOS){
 ```
 
 # Xamarin.Android
-A Xamarin Android project.
+A Xamarin Android project summary.
 
 ## Alternative resources
 Qualifier    | Description
@@ -79,6 +82,21 @@ Qualifier    | Description
 **Navigation key availability** | When **5-way** or **d-pad** navigation is available. Values: **navexposed/navhidden** (Available or unavailable).
 **Main non-touch navigation method** | Type of navigation available on the device. Values: **nonav/dpad/trackball/wheel** (Touch screen only, d-pad available, Trackball available or wheels available).
 **Platform version (API Level)** | The API level supported. Example: **v11** (Level 11 - Android 3.0).
+
+## Create controls dynamically
+```csharp
+//Find the layout
+var viewGroup = Window.DecorView.FindViewById<ViewGroup>(Android.Resource.Id.Content);
+var mainLayout = viewGroup.FindViewById<LinearLayout>(Resource.Id.main_content);
+//Create an image
+var headerImage = new ImageView(this);
+headerImage.SetImageResource(Resource.Drawable.logo);
+mainLayout.AddView(headerImage);
+//Create a text area
+var userNameTextView = new TextView(this);
+userNameTextView.Text = GetString(Resource.String.UserName);
+mainLayout.AddView(userNameTextView);
+```
 
 # Tips
 
