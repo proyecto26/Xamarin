@@ -31,4 +31,5 @@
   <string name="ManageAssets">Manejo de activos</string>
   <string name="LoadAsset">Cargar archivo</string>
   <string name="AndroidLocalization">Localización en Android</string>
+  <string name="Layout">Diseño</string>
 </resources>

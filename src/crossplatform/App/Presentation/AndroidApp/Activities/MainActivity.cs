@@ -13,7 +13,13 @@ namespace AndroidApp
     [Activity(Label = "@string/ApplicationName", MainLauncher = true, Icon = "@drawable/Icon")]
     public class MainActivity : AppCompatActivity
     {
-        Button validateActivityButton, counterActivityButton, callsButton, manageResourcesButton, mediaPlayerActivityButton, manageAssetsActivityButton;
+        Button validateActivityButton,
+            counterActivityButton,
+            callsButton,
+            manageResourcesButton,
+            mediaPlayerActivityButton,
+            manageAssetsActivityButton,
+            layoutActivityButton;
         CurrentPlatform currentPlatform;
 
         protected override void OnCreate(Bundle bundle)
@@ -38,43 +44,20 @@ namespace AndroidApp
             counterActivityButton = FindViewById<Button>(Resource.Id.counterActivityButton);
             mediaPlayerActivityButton = FindViewById<Button>(Resource.Id.mediaPlayerActivityButton);
             manageAssetsActivityButton = FindViewById<Button>(Resource.Id.manageAssetsActivityButton);
+            layoutActivityButton = FindViewById<Button>(Resource.Id.layoutActivityButton);
 
-            callsButton.Click += CallsButton_Click;
-            manageResourcesButton.Click += ManageResourcesButton_Click;
-            validateActivityButton.Click += ValidateActivityButton_Click;
-            counterActivityButton.Click += CounterActivityButton_Click;
-            mediaPlayerActivityButton.Click += mediaPlayerActivityButton_Click;
-            manageAssetsActivityButton.Click += ManageAssetsActivityButton_Click;
+            callsButton.Click += delegate { StartActivity<CallsActivity>(); };
+            manageResourcesButton.Click += delegate { StartActivity<ManageResourcesActivity>(); };
+            validateActivityButton.Click += delegate { StartActivity<ValidateActivity>(); };
+            counterActivityButton.Click += delegate { StartActivity<CounterActivity>(); };
+            mediaPlayerActivityButton.Click += delegate { StartActivity<MediaPlayerActivity>(); };
+            manageAssetsActivityButton.Click += delegate { StartActivity<ManageAssetsActivity>(); };
+            layoutActivityButton.Click += delegate { StartActivity<LayoutActivity>(); };
         }
 
-        private void ManageAssetsActivityButton_Click(object sender, EventArgs e)
+        private void StartActivity<T>()
         {
-            StartActivity(new Android.Content.Intent(this, typeof(ManageAssetsActivity)));
-        }
-
-        private void mediaPlayerActivityButton_Click(object sender, EventArgs e)
-        {
-            StartActivity(new Android.Content.Intent(this, typeof(MediaPlayerActivity)));
-        }
-
-        private void CounterActivityButton_Click(object sender, EventArgs e)
-        {
-            StartActivity(new Android.Content.Intent(this, typeof(CounterActivity)));
-        }
-
-        private void ManageResourcesButton_Click(object sender, EventArgs e)
-        {
-            StartActivity(new Android.Content.Intent(this, typeof(ManageResourcesActivity)));
-        }
-
-        private void CallsButton_Click(object sender, EventArgs e)
-        {
-            StartActivity(new Android.Content.Intent(this, typeof(CallsActivity)));
-        }
-
-        private void ValidateActivityButton_Click(object sender, EventArgs e)
-        {
-            StartActivity(new Android.Content.Intent(this, typeof(ValidateActivity)));
+            StartActivity(new Android.Content.Intent(this, typeof(T)));
         }
 
         void ShowFilePath(string fileName)

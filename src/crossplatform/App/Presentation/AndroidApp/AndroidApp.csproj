@@ -105,18 +105,19 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ManageAssetsActivity.cs" />
-    <Compile Include="CallHistoryActivity.cs" />
-    <Compile Include="CallsActivity.cs" />
-    <Compile Include="CounterActivity.cs" />
-    <Compile Include="MainActivity.cs" />
-    <Compile Include="ManageResourcesActivity.cs" />
-    <Compile Include="MediaPlayerActivity.cs" />
+    <Compile Include="Activities\LayoutActivity.cs" />
+    <Compile Include="Activities\ManageAssetsActivity.cs" />
+    <Compile Include="Activities\CallHistoryActivity.cs" />
+    <Compile Include="Activities\CallsActivity.cs" />
+    <Compile Include="Activities\CounterActivity.cs" />
+    <Compile Include="Activities\MainActivity.cs" />
+    <Compile Include="Activities\ManageResourcesActivity.cs" />
+    <Compile Include="Activities\MediaPlayerActivity.cs" />
     <Compile Include="Fragments\Calls.cs" />
     <Compile Include="PlatformSpecific\MessageDialog.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ValidateActivity.cs" />
+    <Compile Include="Activities\ValidateActivity.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

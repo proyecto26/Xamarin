@@ -29,4 +29,5 @@
   <string name="ManageAssets">Manage Assets</string>
   <string name="LoadAsset">Load Asset</string>
   <string name="AndroidLocalization">Android Localization</string>
+  <string name="Layout">Layout</string>
 </resources>
