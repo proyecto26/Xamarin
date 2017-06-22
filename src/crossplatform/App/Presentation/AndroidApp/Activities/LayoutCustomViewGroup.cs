@@ -13,8 +13,8 @@ using Android.Graphics;
 
 namespace AndroidApp
 {
-    [Activity(Label = "@string/Layout")]
-    public class LayoutActivity : Activity
+    [Activity(Label = "LayoutCustomViewGroup")]
+    public class LayoutCustomViewGroup : Activity
     {
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -27,7 +27,7 @@ namespace AndroidApp
     class CustomViewGroup : ViewGroup
     {
         Context viewGroupContext;
-        public CustomViewGroup(Context context): base(context)
+        public CustomViewGroup(Context context) : base(context)
         {
             this.viewGroupContext = context;
         }

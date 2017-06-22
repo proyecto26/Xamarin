@@ -105,7 +105,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Activities\LayoutActivity.cs" />
+    <Compile Include="Activities\LayoutsActivity.cs" />
+    <Compile Include="Activities\LayoutCustomViewGroup.cs" />
     <Compile Include="Activities\ManageAssetsActivity.cs" />
     <Compile Include="Activities\CallHistoryActivity.cs" />
     <Compile Include="Activities\CallsActivity.cs" />
@@ -147,6 +148,9 @@
       <SubType>Designer</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\layout\ManageAssets.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\Layouts.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>
@@ -234,7 +238,7 @@
     </AndroidResource>
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\values-en\Strings.xml">
+    <AndroidResource Include="Resources\values-es\Strings.xml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>

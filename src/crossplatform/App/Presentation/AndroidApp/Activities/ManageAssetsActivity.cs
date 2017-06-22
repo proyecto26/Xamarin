@@ -17,7 +17,7 @@ namespace AndroidApp
     [Activity(Label = "@string/ManageAssets")]
     public class ManageAssetsActivity : AppCompatActivity
     {
-        Button loadAssetButton;
+        Button loadAssetButton, showPathButton;
         TextView assetText;
         Android.Content.Res.AssetManager manager;
         protected override void OnCreate(Bundle savedInstanceState)
@@ -32,6 +32,16 @@ namespace AndroidApp
             assetText = FindViewById<TextView>(Resource.Id.assetText);
             loadAssetButton = FindViewById<Button>(Resource.Id.loadAssetButton);
             loadAssetButton.Click += LoadAssetButton_Click;
+            showPathButton = FindViewById<Button>(Resource.Id.showPathButton);
+            showPathButton.Click += ShowPathButton_Click; ;
+        }
+
+        private void ShowPathButton_Click(object sender, EventArgs e)
+        {
+            var Utilities = new SharedProject.Utilities();
+            new Android.App.AlertDialog.Builder(this)
+                .SetMessage($"Path file: {Utilities.GetFilePath("demo.txt")}")
+                .Show();
         }
 
         private void LoadAssetButton_Click(object sender, EventArgs e)

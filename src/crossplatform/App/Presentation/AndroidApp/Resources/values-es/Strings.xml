@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="ApplicationName">Android App</string>
+  <string name="UserName">Nombre de usuario</string>
+  <string name="Status">Estatus</string>
+  <string name="Token">Código</string>
+  <string name="Welcome">Bienvenido!</string>
+  <string name="Calls">Llamadas</string>
+  <string name="ManageResources">Manejo de recursos</string>
+  <string name="CallHistoryTitle">Historial de llamadas</string>
+  <string name="ConvertButton">Convertir</string>
+  <string name="Ok">Ok</string>
+  <string name="Cancel">Cancelar</string>
+  <string name="Call">Llamar</string>
+  <string name="CallTo">Llamar al</string>
+  <string name="CallToNumber">Llamar al número</string>
+  <string name="CallHistoryButton">Historial de llamadas</string>
+  <string name="ValidateActivity">Validar actividad</string>
+  <string name="ProvidePhoneNumber">Proporciona un número de teléfono</string>
+  <string name="EmailLabel">Correo:</string>
+  <string name="PasswordLabel">Contraseña:</string>
+  <string name="Validate">Validar</string>
+  <string name="Counter">Contador</string>
+  <string name="ClickMe">Hazme Click!</string>
+  <plurals name="numberOfClicks">
+    <item quantity="one">Hay %d Click.</item>
+    <item quantity="other">Hay %d Clicks.</item>
+  </plurals>
+  <string name="MediaPlayer">Reproductor Multimedia</string>
+  <string name="Play">Reproducir</string>
+  <string name="ManageAssets">Manejo de activos</string>
+  <string name="LoadAsset">Cargar archivo</string>
+  <string name="AndroidLocalization">Localización en Android</string>
+  <string name="Layouts">Diseños</string>
+  <string name="CustomViewGroup">ViewGroup Personalizado</string>
+  <string name="ShowPath">Mostrar ruta de un archivo</string>
+</resources>

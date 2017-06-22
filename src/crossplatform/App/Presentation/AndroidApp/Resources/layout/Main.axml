@@ -65,10 +65,10 @@
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp" />
         <Button
-            android:text="@string/Layout"
+            android:text="@string/Layouts"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/layoutActivityButton"
+            android:id="@+id/layoutsActivityButton"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp" />
     </LinearLayout>

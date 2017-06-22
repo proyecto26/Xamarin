@@ -19,8 +19,7 @@ namespace AndroidApp
             manageResourcesButton,
             mediaPlayerActivityButton,
             manageAssetsActivityButton,
-            layoutActivityButton;
-        CurrentPlatform currentPlatform;
+            layoutsActivityButton;
 
         protected override void OnCreate(Bundle bundle)
         {
@@ -37,14 +36,13 @@ namespace AndroidApp
 
         private void Initialize()
         {
-            currentPlatform = new CurrentPlatform(new MessageDialog(this));
             validateActivityButton = FindViewById<Button>(Resource.Id.validateActivityButton);
             callsButton = FindViewById<Button>(Resource.Id.callsButton);
             manageResourcesButton = FindViewById<Button>(Resource.Id.manageResourcesButton);
             counterActivityButton = FindViewById<Button>(Resource.Id.counterActivityButton);
             mediaPlayerActivityButton = FindViewById<Button>(Resource.Id.mediaPlayerActivityButton);
             manageAssetsActivityButton = FindViewById<Button>(Resource.Id.manageAssetsActivityButton);
-            layoutActivityButton = FindViewById<Button>(Resource.Id.layoutActivityButton);
+            layoutsActivityButton = FindViewById<Button>(Resource.Id.layoutsActivityButton);
 
             callsButton.Click += delegate { StartActivity<CallsActivity>(); };
             manageResourcesButton.Click += delegate { StartActivity<ManageResourcesActivity>(); };
@@ -52,20 +50,12 @@ namespace AndroidApp
             counterActivityButton.Click += delegate { StartActivity<CounterActivity>(); };
             mediaPlayerActivityButton.Click += delegate { StartActivity<MediaPlayerActivity>(); };
             manageAssetsActivityButton.Click += delegate { StartActivity<ManageAssetsActivity>(); };
-            layoutActivityButton.Click += delegate { StartActivity<LayoutActivity>(); };
+            layoutsActivityButton.Click += delegate { StartActivity<LayoutsActivity>(); };
         }
 
         private void StartActivity<T>()
         {
             StartActivity(new Android.Content.Intent(this, typeof(T)));
-        }
-
-        void ShowFilePath(string fileName)
-        {
-            var Utilities = new SharedProject.Utilities();
-            new Android.App.AlertDialog.Builder(this)
-                .SetMessage($"Path file: {Utilities.GetFilePath(fileName)}")
-                .Show();
         }
 
         /// <summary>
@@ -94,9 +84,6 @@ namespace AndroidApp
         {
             Android.Util.Log.Debug("AppLog", "Home Activity - OnResume");
             base.OnResume();
-
-            //Show the path of a file
-            this.ShowFilePath("database.db");
         }
 
         /// <summary>
