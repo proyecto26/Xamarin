@@ -11,21 +11,17 @@
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:id="@+id/main_content"
-        android:layout_below="@id/toolbar">
-        <Button
-            android:text="@string/CustomViewGroup"
+        android:layout_below="@id/toolbar"
+        android:minWidth="25px"
+        android:minHeight="25px">
+        <ListView
+            android:minWidth="25px"
+            android:minHeight="25px"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/customViewGroupActivityButton"
-            android:layout_marginTop="10dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp" />
-        <Button
-            android:text="@string/CustomListView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/customListViewActivityButton"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp" />
+            android:id="@+id/colorsListView"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp" />
     </LinearLayout>
 </RelativeLayout>

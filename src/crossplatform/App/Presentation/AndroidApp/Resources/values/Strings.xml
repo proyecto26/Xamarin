@@ -34,4 +34,5 @@
   <string name="Layouts">Layouts</string>
   <string name="CustomViewGroup">Custom ViewGroup</string>
   <string name="ShowPath">Show Path</string>
+  <string name="CustomListView">Custom ListView</string>
 </resources>

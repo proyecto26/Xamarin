@@ -105,6 +105,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Activities\LayoutListItem.cs" />
     <Compile Include="Activities\LayoutsActivity.cs" />
     <Compile Include="Activities\LayoutCustomViewGroup.cs" />
     <Compile Include="Activities\ManageAssetsActivity.cs" />
@@ -114,6 +115,8 @@
     <Compile Include="Activities\MainActivity.cs" />
     <Compile Include="Activities\ManageResourcesActivity.cs" />
     <Compile Include="Activities\MediaPlayerActivity.cs" />
+    <Compile Include="Adapters\Color\ColorAdapter.cs" />
+    <Compile Include="Adapters\Color\ColorItem.cs" />
     <Compile Include="Fragments\Calls.cs" />
     <Compile Include="PlatformSpecific\MessageDialog.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
@@ -151,6 +154,12 @@
       <SubType>Designer</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\layout\Layouts.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\ColorItem.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\LayoutListItem.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>

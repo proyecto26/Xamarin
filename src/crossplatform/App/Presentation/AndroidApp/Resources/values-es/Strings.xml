@@ -34,4 +34,5 @@
   <string name="Layouts">Diseños</string>
   <string name="CustomViewGroup">ViewGroup Personalizado</string>
   <string name="ShowPath">Mostrar ruta de un archivo</string>
+  <string name="CustomListView">ListView personalizado</string>
 </resources>

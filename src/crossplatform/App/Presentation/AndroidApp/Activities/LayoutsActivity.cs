@@ -9,7 +9,7 @@ namespace AndroidApp
     [Activity(Label = "@string/Layouts")]
     public class LayoutsActivity : AppCompatActivity
     {
-        Button customViewGroupActivityButton;
+        Button customViewGroupActivityButton, customListViewActivityButton;
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -20,6 +20,9 @@ namespace AndroidApp
 
             customViewGroupActivityButton = FindViewById<Button>(Resource.Id.customViewGroupActivityButton);
             customViewGroupActivityButton.Click += delegate { StartActivity<LayoutCustomViewGroup>(); };
+
+            customListViewActivityButton = FindViewById<Button>(Resource.Id.customListViewActivityButton);
+            customListViewActivityButton.Click += delegate { StartActivity<LayoutListItem>(); };
         }
 
         private void StartActivity<T>()
