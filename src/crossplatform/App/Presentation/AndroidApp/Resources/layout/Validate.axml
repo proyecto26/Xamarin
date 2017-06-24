@@ -31,7 +31,9 @@
             android:layout_marginRight="15dp"
             android:background="@drawable/back"
             android:height="@android:dimen/notification_large_icon_width"
-            android:layout_marginTop="10dp" />
+            android:layout_marginTop="10dp"
+            android:paddingLeft="7dp"
+            android:paddingRight="7dp" />
         <TextView
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:layout_width="match_parent"
@@ -51,14 +53,16 @@
             android:layout_marginLeft="15dp"
             android:layout_marginRight="15dp"
             android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp" />
-        <Button
-            android:text="@string/Validate"
-            android:layout_width="match_parent"
+            android:layout_marginBottom="10dp"
+            android:paddingLeft="7dp"
+            android:paddingRight="7dp" />
+        <ImageButton
+            android:src="@drawable/send"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/validateButton"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp" />
+            android:layout_gravity="center_horizontal"
+            android:background="@android:color/transparent" />
         <TextView
             android:layout_width="match_parent"
             android:layout_height="240.0dp"

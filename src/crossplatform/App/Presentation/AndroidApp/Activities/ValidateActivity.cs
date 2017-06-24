@@ -21,7 +21,7 @@ namespace AndroidApp
     {
         TextView resultText;
         EditText emailText, passwordText;
-        Button validateButton;
+        ImageButton validateButton;
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -33,16 +33,11 @@ namespace AndroidApp
             resultText = FindViewById<TextView>(Resource.Id.resultText);
             emailText = FindViewById<EditText>(Resource.Id.emailText);
             passwordText = FindViewById<EditText>(Resource.Id.passwordText);
-            validateButton = FindViewById<Button>(Resource.Id.validateButton);
+            validateButton = FindViewById<ImageButton>(Resource.Id.validateButton);
             validateButton.Click += ValidateButton_Click;
         }
 
-        private void ValidateButton_Click(object sender, EventArgs e)
-        {
-            this.ValidateAccount();
-        }
-
-        async void ValidateAccount()
+        private async void ValidateButton_Click(object sender, EventArgs e)
         {
             var serviceClient = new ServiceClient();
 
@@ -51,7 +46,7 @@ namespace AndroidApp
             var result = await serviceClient.ValidateAsync(emailText.Text, passwordText.Text, deviceId);
             var resultMessage = $"{result.Status}\n{result.Fullname}\n{result.Token}";
 
-            if (Android.OS.Build.VERSION.SdkInt >= 
+            if (Android.OS.Build.VERSION.SdkInt >=
                 BuildVersionCodes.Lollipop)
             {
                 var builder = new Notification.Builder(this)

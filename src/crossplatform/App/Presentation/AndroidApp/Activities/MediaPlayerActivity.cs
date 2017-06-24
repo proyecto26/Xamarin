@@ -34,6 +34,13 @@ namespace AndroidApp
         {
             var player = Android.Media.MediaPlayer.Create(this, Resource.Raw.helloWorld);
             player.Start();
+            player.Completion += Player_Completion;
+            playButton.Enabled = false;
+        }
+
+        private void Player_Completion(object sender, EventArgs e)
+        {
+            playButton.Enabled = true;
         }
     }
 }
