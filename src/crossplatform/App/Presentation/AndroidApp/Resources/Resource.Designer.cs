@@ -785,6 +785,9 @@ namespace AndroidApp
 		public partial class Boolean
 		{
 			
+			// aapt resource value: 0x7f0a0005
+			public const int ButtonCapitalized = 2131361797;
+			
 			// aapt resource value: 0x7f0a0000
 			public const int abc_action_bar_embed_tabs = 2131361792;
 			

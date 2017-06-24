@@ -240,7 +240,9 @@
   <ItemGroup>
     <AndroidResource Include="Resources\drawable-en\logo.jpg" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <AndroidResource Include="Resources\values\Settings.xml" />
+  </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\values-pt\Strings.xml">
       <SubType>Designer</SubType>

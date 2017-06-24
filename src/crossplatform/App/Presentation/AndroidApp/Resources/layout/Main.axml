@@ -28,48 +28,55 @@
             android:layout_height="wrap_content"
             android:id="@+id/callsButton"
             android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp" />
+            android:layout_marginRight="10dp"
+            android:textAllCaps="@bool/ButtonCapitalized" />
         <Button
             android:text="@string/ManageResources"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/manageResourcesButton"
             android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp" />
+            android:layout_marginRight="10dp"
+            android:textAllCaps="@bool/ButtonCapitalized" />
         <Button
             android:text="@string/ValidateActivity"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/validateActivityButton"
             android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp" />
+            android:layout_marginRight="10dp"
+            android:textAllCaps="@bool/ButtonCapitalized" />
         <Button
             android:text="@string/Counter"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/counterActivityButton"
             android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp" />
+            android:layout_marginRight="10dp"
+            android:textAllCaps="@bool/ButtonCapitalized" />
         <Button
             android:text="@string/MediaPlayer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/mediaPlayerActivityButton"
             android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp" />
+            android:layout_marginRight="10dp"
+            android:textAllCaps="@bool/ButtonCapitalized" />
         <Button
             android:text="@string/ManageAssets"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/manageAssetsActivityButton"
             android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp" />
+            android:layout_marginRight="10dp"
+            android:textAllCaps="@bool/ButtonCapitalized" />
         <Button
             android:text="@string/Layouts"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/layoutsActivityButton"
             android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp" />
+            android:layout_marginRight="10dp"
+            android:textAllCaps="@bool/ButtonCapitalized" />
     </LinearLayout>
 </RelativeLayout>
