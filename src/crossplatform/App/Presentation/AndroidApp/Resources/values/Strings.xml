@@ -35,4 +35,6 @@
   <string name="CustomViewGroup">Custom ViewGroup</string>
   <string name="ShowPath">Show Path</string>
   <string name="CustomListView">Custom ListView</string>
+  <string name="Forms">Forms</string>
+  <string name="InlineLabels">Inline Labels</string>
 </resources>

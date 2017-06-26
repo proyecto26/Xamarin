@@ -35,14 +35,16 @@
             android:layout_height="wrap_content"
             android:id="@+id/translateButton"
             android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp" />
+            android:layout_marginRight="10dp"
+            android:textAllCaps="@bool/ButtonCapitalized" />
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/callButton"
             android:text="@string/Call"
             android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp" />
+            android:layout_marginRight="10dp"
+            android:textAllCaps="@bool/ButtonCapitalized" />
         <Button
             android:text="@string/CallHistoryButton"
             android:layout_width="match_parent"
@@ -50,6 +52,7 @@
             android:id="@+id/callHistoryButton"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
-            android:enabled="false" />
+            android:enabled="false"
+            android:textAllCaps="@bool/ButtonCapitalized" />
     </LinearLayout>
 </RelativeLayout>

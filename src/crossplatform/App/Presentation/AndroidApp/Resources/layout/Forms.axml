@@ -13,13 +13,19 @@
         android:id="@+id/main_content"
         android:layout_below="@id/toolbar">
         <Button
-            android:text="@string/Play"
+            android:text="@string/ValidateActivity"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/playButton"
+            android:id="@+id/validateActivityButton"
             android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
             android:layout_marginTop="10dp"
-            android:textAllCaps="@bool/ButtonCapitalized" />
+            android:layout_marginRight="10dp" />
+        <Button
+            android:text="@string/InlineLabels"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/inlineLabelsActivityButton"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp" />
     </LinearLayout>
 </RelativeLayout>

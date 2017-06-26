@@ -13,7 +13,7 @@ namespace AndroidApp
     [Activity(Label = "@string/ApplicationName", MainLauncher = true, Icon = "@drawable/Icon")]
     public class MainActivity : AppCompatActivity
     {
-        Button validateActivityButton,
+        Button formsActivityButton,
             counterActivityButton,
             callsButton,
             manageResourcesButton,
@@ -36,9 +36,9 @@ namespace AndroidApp
 
         private void Initialize()
         {
-            validateActivityButton = FindViewById<Button>(Resource.Id.validateActivityButton);
             callsButton = FindViewById<Button>(Resource.Id.callsButton);
             manageResourcesButton = FindViewById<Button>(Resource.Id.manageResourcesButton);
+            formsActivityButton = FindViewById<Button>(Resource.Id.formsActivityButton);
             counterActivityButton = FindViewById<Button>(Resource.Id.counterActivityButton);
             mediaPlayerActivityButton = FindViewById<Button>(Resource.Id.mediaPlayerActivityButton);
             manageAssetsActivityButton = FindViewById<Button>(Resource.Id.manageAssetsActivityButton);
@@ -46,7 +46,7 @@ namespace AndroidApp
 
             callsButton.Click += delegate { StartActivity<CallsActivity>(); };
             manageResourcesButton.Click += delegate { StartActivity<ManageResourcesActivity>(); };
-            validateActivityButton.Click += delegate { StartActivity<ValidateActivity>(); };
+            formsActivityButton.Click += delegate { StartActivity<FormsActivity>(); };
             counterActivityButton.Click += delegate { StartActivity<CounterActivity>(); };
             mediaPlayerActivityButton.Click += delegate { StartActivity<MediaPlayerActivity>(); };
             manageAssetsActivityButton.Click += delegate { StartActivity<ManageAssetsActivity>(); };

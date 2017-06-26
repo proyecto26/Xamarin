@@ -35,4 +35,6 @@
   <string name="CustomViewGroup">ViewGroup Personalizado</string>
   <string name="ShowPath">Mostrar ruta de un archivo</string>
   <string name="CustomListView">ListView personalizado</string>
+  <string name="Forms">Formularios</string>
+  <string name="InlineLabels">Etiquetas en línea</string>
 </resources>

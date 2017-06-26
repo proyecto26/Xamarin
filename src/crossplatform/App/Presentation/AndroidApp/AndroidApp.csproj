@@ -74,6 +74,9 @@
     <Reference Include="SALLab11">
       <HintPath>..\..\..\..\..\..\..\xamarin\SALLab11.dll</HintPath>
     </Reference>
+    <Reference Include="SALLab14">
+      <HintPath>..\..\..\..\..\..\..\xamarin\SALLab14.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Net.Http" />
@@ -123,6 +126,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Activities\FormsActivity.cs" />
+    <Compile Include="Activities\InlineLabels.cs" />
     <Compile Include="Activities\LayoutListItem.cs" />
     <Compile Include="Activities\LayoutsActivity.cs" />
     <Compile Include="Activities\LayoutCustomViewGroup.cs" />
@@ -180,6 +185,14 @@
     <AndroidResource Include="Resources\layout\LayoutListItem.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
+    <AndroidResource Include="Resources\layout\Forms.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\InlineLabels.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout-es-rMX-port\InlineLabels.axml" />
+    <AndroidResource Include="Resources\layout-land\InlineLabels.axml" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\Main.axml">
@@ -283,6 +296,16 @@
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\send.png" />
   </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\XamarinDiplomado.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\XamarinDiplomadoH.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\XamarinDiplomadoM.jpg" />
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="..\..\SharedProject\SharedProject.projitems" Label="Shared" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Import Project="..\..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets" Condition="Exists('..\..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" />
