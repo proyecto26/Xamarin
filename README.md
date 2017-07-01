@@ -145,6 +145,9 @@ var path = Path.Combine(libraryPath, fileName);
   
 > **Note:** A **SSH key** will be created and registered in the file **authorized_keys** on the **Mac**.
 
+# Other projects
+- **[Hack@Home - Xamarin 3.0](https://github.com/jdnichollsc/Hack-Home)**.
+
 # Happy coding
 Made with <3
 
