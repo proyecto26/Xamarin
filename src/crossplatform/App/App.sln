@@ -21,6 +21,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UWP", "Presentation\UWP\UWP
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PCL", "PCL\PCL.csproj", "{E76C1624-4178-4321-B9C8-AB25783C9D14}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "dlls", "dlls", "{2B4CA9A6-BEEF-4543-8D5C-C6F8862243F6}"
+	ProjectSection(SolutionItems) = preProject
+		dlls\SALLab11.dll = dlls\SALLab11.dll
+		dlls\SALLab14.dll = dlls\SALLab14.dll
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		SharedProject\SharedProject.projitems*{2dff95e1-b7c0-417e-81fe-9af6ca4627ef}*SharedItemsImports = 4
