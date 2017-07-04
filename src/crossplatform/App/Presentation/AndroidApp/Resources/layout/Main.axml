@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:local="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent">
     <include
@@ -22,54 +22,97 @@
             android:textColor="@android:color/black"
             android:layout_marginTop="10dp"
             android:text="@string/Welcome" />
-        <Button
-            android:text="@string/Calls"
+        <android.support.v7.widget.GridLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/callsButton"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp" />
-        <Button
-            android:text="@string/ManageResources"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/manageResourcesButton"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp" />
-        <Button
-            android:text="@string/Forms"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/formsActivityButton"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp" />
-        <Button
-            android:text="@string/Counter"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/counterActivityButton"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp" />
-        <Button
-            android:text="@string/MediaPlayer"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/mediaPlayerActivityButton"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp" />
-        <Button
-            android:text="@string/ManageAssets"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/manageAssetsActivityButton"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp" />
-        <Button
-            android:text="@string/Layouts"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/layoutsActivityButton"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp" />
+            app:alignmentMode="alignBounds"
+            app:columnCount="2"
+            app:rowOrderPreserved="false"
+            app:useDefaultMargins="true">
+            <Button
+                app:layout_gravity="fill_horizontal"
+                app:layout_columnWeight="1"
+                app:layout_rowWeight="1"
+                android:layout_width="0dp"
+                android:layout_height="120dp"
+                android:gravity="center"
+                android:text="@string/Calls"
+                android:id="@+id/callsButton"
+                android:background="@drawable/abc_btn_colored_material"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+            <Button
+                app:layout_gravity="fill_horizontal"
+                app:layout_columnWeight="1"
+                app:layout_rowWeight="1"
+                android:layout_width="0dp"
+                android:layout_height="120dp"
+                android:gravity="center"
+                android:text="@string/ManageResources"
+                android:id="@+id/manageResourcesButton"
+                android:textSize="20dp"
+                android:background="@drawable/abc_btn_colored_material"
+                android:textStyle="bold" />
+            <Button
+                app:layout_gravity="fill_horizontal"
+                app:layout_columnWeight="1"
+                app:layout_rowWeight="1"
+                android:layout_width="0dp"
+                android:layout_height="120dp"
+                android:gravity="center"
+                android:text="@string/Forms"
+                android:id="@+id/formsActivityButton"
+                android:background="@drawable/abc_btn_colored_material"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+            <Button
+                app:layout_gravity="fill_horizontal"
+                app:layout_columnWeight="1"
+                app:layout_rowWeight="1"
+                android:layout_width="0dp"
+                android:layout_height="120dp"
+                android:gravity="center"
+                android:text="@string/Counter"
+                android:id="@+id/counterActivityButton"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:background="@drawable/abc_btn_colored_material" />
+            <Button
+                app:layout_gravity="fill_horizontal"
+                app:layout_columnWeight="1"
+                app:layout_rowWeight="1"
+                android:layout_width="0dp"
+                android:layout_height="120dp"
+                android:gravity="center"
+                android:text="@string/MediaPlayer"
+                android:id="@+id/mediaPlayerActivityButton"
+                android:background="@drawable/abc_btn_colored_material"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+            <Button
+                app:layout_gravity="fill_horizontal"
+                app:layout_columnWeight="1"
+                app:layout_rowWeight="1"
+                android:layout_width="0dp"
+                android:layout_height="120dp"
+                android:gravity="center"
+                android:text="@string/ManageAssets"
+                android:id="@+id/manageAssetsActivityButton"
+                android:background="@drawable/abc_btn_colored_material"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+            <Button
+                app:layout_gravity="fill_horizontal"
+                app:layout_columnWeight="1"
+                app:layout_rowWeight="1"
+                android:layout_width="0dp"
+                android:layout_height="120dp"
+                android:gravity="center"
+                android:text="@string/Layouts"
+                android:id="@+id/layoutsActivityButton"
+                android:background="@drawable/abc_btn_colored_material"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+        </android.support.v7.widget.GridLayout>
     </LinearLayout>
 </RelativeLayout>
