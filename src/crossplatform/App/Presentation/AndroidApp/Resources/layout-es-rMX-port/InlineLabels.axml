@@ -16,7 +16,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <TextView
-            android:text="Correo"
+            android:text="@string/EmailLabel"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:id="@+id/textViewEMail"
             android:textColor="@android:color/holo_orange_dark"
@@ -34,7 +34,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <TextView
-            android:text="Password"
+            android:text="@string/PasswordLabel"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:id="@+id/textViewPassword"
             android:textColor="@android:color/holo_orange_dark"
@@ -48,7 +48,7 @@
             android:layout_height="match_parent" />
     </LinearLayout>
     <Button
-        android:text="Validar"
+        android:text="@string/Validate"
         android:id="@+id/buttonValidate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
