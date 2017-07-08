@@ -20,7 +20,7 @@
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:id="@+id/textViewEMail"
             android:textColor="@android:color/holo_orange_dark"
-            android:layout_width="112.0dp"
+            android:layout_width="120dp"
             android:layout_height="match_parent"
             android:gravity="center_vertical|right" />
         <EditText
@@ -38,7 +38,7 @@
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:id="@+id/textViewPassword"
             android:textColor="@android:color/holo_orange_dark"
-            android:layout_width="112.0dp"
+            android:layout_width="120dp"
             android:layout_height="match_parent"
             android:gravity="center_vertical|right" />
         <EditText
