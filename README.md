@@ -150,6 +150,10 @@ var path = Path.Combine(libraryPath, fileName);
 # Other projects
 - **[Hack@Home - Xamarin 3.0](https://github.com/jdnichollsc/Hack-Home)**.
 
+# Supporting
+I believe in Unicorns 🦄
+Support [me](http://www.paypal.me/jdnichollsc/2), if you do too.
+
 # Happy coding
 Made with <3
 
