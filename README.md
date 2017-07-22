@@ -19,20 +19,20 @@ Native apps for multiple platforms **(iOS, Android and Windows)** on a shared C#
 ## Structure
 Each type of project has its own structure:
 
-* ## Xamarin Forms Project Structure (Cross-platform)
+* ### Xamarin Forms Project Structure (Cross-platform)
 Path                           | Explanation
 --------------- | -------------
 `./App.xaml`    | Global resources in the app.
 `./App.xaml.cs` | Extend the app.
 
-* ## Android Project Structure
+* ### Android Project Structure
 Path                           | Explanation
 ------------------------------ | -------------
 `./MainActivity.cs`            | Main Class.
 `./Resources/layout/Main.axml` | Graphic Interface using XAML.
 `./Components`                 | Add new features and third-party services.
 
-* ## iOS Project Structure
+* ### iOS Project Structure
 Path                        | Explanation
 --------------------------- | -------------
 `./ViewController.cs`       | Main Class. We can configure alerts about Memory, Storage, etc.
@@ -42,15 +42,15 @@ Path                        | Explanation
 `./AppDelegate.cs`          | Validate the status of the application to know when the application is active, running or finished.
 `./Components`              | Add new features and third-party services.
 
-# Sharing Code
+## Sharing Code
 There are some strategies for sharing code between platforms:
 * **Shared Asset Project (SAP)**: Files and source code that are combined at compile time.
 * **Portable Class Library (PCL)**: A **DLL** library that encapsulates common code and can be referenced from other projects.
 
-# Xamarin.Forms
+## Xamarin.Forms
 A Xamaring Forms project summary.
 
-## XAML
+### XAML
 The design of the views is usually developed in XAML:
 ```xaml
 <ContentPage xmlns="..." xmlns:x="..." x:Class="App.MainPage" Title="My App">
@@ -69,10 +69,10 @@ if(Device.OS == TargetPlatform.iOS){
 }
 ```
 
-# Xamarin.Android
+## Xamarin.Android
 A Xamarin Android project summary.
 
-## Alternative resources
+### Alternative resources
 Qualifier    | Description
 ----------   | -------------
 **MCC and MNC** | Mobile Country Code and Mobile Network Code. Example: **mcc310-mnc026** (EEUU/T-Mobile). Check the list of codes [here](http://mcc-mnc.com/).
@@ -93,7 +93,7 @@ Qualifier    | Description
 **Main non-touch navigation method** | Type of navigation available on the device. Values: **nonav/dpad/trackball/wheel** (Touch screen only, d-pad available, Trackball available or wheels available).
 **Platform version (API Level)** | The API level supported. Example: **v11** (Level 11 - Android 3.0).
 
-## Create controls dynamically
+### Create controls dynamically
 ```csharp
 //Find the layout
 var viewGroup = Window.DecorView.FindViewById<ViewGroup>(Android.Resource.Id.Content);
@@ -110,9 +110,9 @@ userNameTextView.Text = GetString(Resource.String.UserName);
 mainLayout.AddView(userNameTextView);
 ```
 
-# Tips
+## Tips
 
-## Check the support of the APIs at runtime - `Xamarin.Android`
+### Check the support of the APIs at runtime - `Xamarin.Android`
 We can detect the current version of Android to validate the **APIs** that we can use and support old Android platforms (Android fragmentation):
 ```c#
 if(Android.OS.Build.VERSION.SdkInt >= BuildVersionCodes.Lollipop){
@@ -124,7 +124,7 @@ else{
 }
 ```
 
-## Conditional Compilation for shared resources
+### Conditional Compilation for shared resources
 We can identify some compilation symbols for shared projects:
 - __MOBILE__ (Android and iOS platforms)
 - __IOS__ (Xamarin.iOS)
@@ -143,7 +143,7 @@ var path = Path.Combine(libraryPath, fileName);
 ```
 > **Note:** You can specify platform versions, for example: `__ANDROID_22__`. Also you can create your own conditional compilation symbols from **Project Properties/Build** section.
 
-## Remote Login for Mac
+### Remote Login for Mac
 
 - Enable **Remote Login** option on Mac:
 
@@ -155,14 +155,14 @@ var path = Path.Combine(libraryPath, fileName);
   
 > **Note:** A **SSH key** will be created and registered in the file **authorized_keys** on the **Mac**.
 
-# Other projects
+## Other projects
 - **[Hack@Home - Xamarin 3.0](https://github.com/jdnichollsc/Hack-Home)**.
 
-# Supporting
+## Supporting
 I believe in Unicorns 🦄
 Support [me](http://www.paypal.me/jdnichollsc/2), if you do too.
 
-# Happy coding
+## Happy coding
 Made with <3
 
 <img width="150px" src="http://phaser.azurewebsites.net/assets/nicholls.png" align="right">
