@@ -8,7 +8,15 @@ Native apps for multiple platforms **(iOS, Android and Windows)** on a shared C#
 <img width="auto" height="411px" src="img/form.png">|
 :---: | :---: | :---: |
 
-# Structure
+## Templates:
+- **Xamarin.Android:** https://github.com/proyecto26/Xamarin/tree/master/src/android/App
+  
+  A Xamarin.Android example using mocks.
+- **Xamarin.Android & Xamarin.iOS** https://github.com/proyecto26/Xamarin/tree/master/src/crossplatform/App
+  
+  A template with a lot of examples of each platform.
+
+## Structure
 Each type of project has its own structure:
 
 * ## Xamarin Forms Project Structure (Cross-platform)
