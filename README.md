@@ -110,6 +110,11 @@ userNameTextView.Text = GetString(Resource.String.UserName);
 mainLayout.AddView(userNameTextView);
 ```
 
+## Xamarin.iOS
+A Xamarin iOS project summary.
+
+
+
 ## Tips
 
 ### Check the support of the APIs at runtime - `Xamarin.Android`
