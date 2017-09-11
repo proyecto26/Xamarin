@@ -2,7 +2,7 @@
 using System;
 using UIKit;
 
-namespace iOS.PlatformSpecific
+namespace iOSApp.PlatformSpecific
 {
     public class MessageDialog : IMessageDialog
     {

@@ -1,8 +1,8 @@
-﻿using iOS.PlatformSpecific;
+﻿using iOSApp.PlatformSpecific;
 using PCL.Helpers;
 using UIKit;
 
-namespace iOS
+namespace iOSApp
 {
     public class Application
     {

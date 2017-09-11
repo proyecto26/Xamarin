@@ -15,7 +15,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentatio
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AndroidApp", "Presentation\AndroidApp\AndroidApp.csproj", "{8D0B9975-B0D9-4B19-9C52-5059F73AB224}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iOS", "Presentation\iOS\iOS.csproj", "{2DFF95E1-B7C0-417E-81FE-9AF6CA4627EF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iOSApp", "Presentation\iOS\iOSApp.csproj", "{2DFF95E1-B7C0-417E-81FE-9AF6CA4627EF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UWP", "Presentation\UWP\UWP.csproj", "{41167408-F8DB-47BC-A515-1229D7872644}"
 EndProject
