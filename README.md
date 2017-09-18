@@ -113,7 +113,7 @@ mainLayout.AddView(userNameTextView);
 ## Xamarin.iOS
 A Xamarin iOS project summary.
 
-
+![iOS Architecture](img/ios-architecture.png)
 
 ## Tips
 
