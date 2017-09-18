@@ -167,6 +167,9 @@ var path = Path.Combine(libraryPath, fileName);
 I believe in Unicorns 🦄
 Support [me](http://www.paypal.me/jdnichollsc/2), if you do too.
 
+## Credits
+- [TI Capacitación](https://ticapacitacion.com)
+
 ## Happy coding
 Made with <3
 
