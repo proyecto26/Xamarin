@@ -198,6 +198,7 @@
     </AndroidResource>
     <AndroidResource Include="Resources\layout-es-rMX-port\InlineLabels.axml" />
     <AndroidResource Include="Resources\layout-land\InlineLabels.axml" />
+    <AndroidResource Include="Resources\drawable-en\Icon.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\Main.axml">
@@ -230,9 +231,6 @@
     <AndroidResource Include="Resources\values\theme.xml">
       <SubType>Designer</SubType>
     </AndroidResource>
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable\Icon.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\back.xml" />
