@@ -19,12 +19,12 @@ namespace AndroidApp
     [Activity(Label = "@string/Calls")]
     public class CallsActivity : AppCompatActivity
     {
+        Calls Data;
         string translatedNumber = string.Empty;
         EditText phoneNumberText;
         CurrentPlatform currentPlatform;
         Button translateButton, callButton, callHistoryButton;
         PhoneTranslator translator = new PhoneTranslator();
-        Calls Data;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -74,8 +74,9 @@ namespace AndroidApp
                 {
                     Data.PhoneNumbers.Add(translatedNumber);
                     callHistoryButton.Enabled = true;
+                    var url = Android.Net.Uri.Parse($"tel:{translatedNumber}");
                     var callIntent = new Android.Content.Intent(Android.Content.Intent.ActionCall);
-                    callIntent.SetData(Android.Net.Uri.Parse($"tel:{translatedNumber}"));
+                    callIntent.SetData(url);
                     StartActivity(callIntent);
                 },
                 this.Resources.GetString(Resource.String.Cancel)

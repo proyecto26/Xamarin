@@ -10,10 +10,18 @@ namespace iOSApp.PlatformSpecific
         {
             UIApplication.SharedApplication.InvokeOnMainThread(() =>
             {
-                var alertView = new UIAlertView(title ?? string.Empty, message, null, okText ?? "OK", cancelText ?? (cancelHandler != null ? "Cancel" : null));
-                alertView.Clicked += (s, ev) => { okHandler?.Invoke(s, ev); };
-                alertView.Canceled += (s, ev) => { cancelHandler?.Invoke(s, ev); };
-                alertView.Show();
+                var alert = UIAlertController.Create(title ?? string.Empty, message, UIAlertControllerStyle.Alert);
+                okText = okText ?? "Ok";
+				alert.AddAction(UIAlertAction.Create(okText, UIAlertActionStyle.Default, (sender) => {
+					okHandler?.Invoke(sender.Self, null);
+				}));
+                if(!string.IsNullOrEmpty(cancelText) || cancelHandler!= null){
+                    cancelText = cancelText ?? "Cancel";
+                    alert.AddAction(UIAlertAction.Create(cancelText, UIAlertActionStyle.Cancel, (sender) => {
+						cancelHandler?.Invoke(sender.Self, null);
+					}));
+                }
+                UIApplication.SharedApplication.KeyWindow.RootViewController.PresentViewController(alert, true, null);
             });
         }
     }

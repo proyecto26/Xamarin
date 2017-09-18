@@ -15,14 +15,17 @@ namespace iOSApp
             get;
             set;
         }
+		public static UIStoryboard Storyboard = UIStoryboard.FromName("Main", null);
+		public static UIViewController initialViewController;
 
         public override bool FinishedLaunching(UIApplication application, NSDictionary launchOptions)
         {
             // create a new window instance based on the screen size
             Window = new UIWindow(UIScreen.MainScreen.Bounds);
 
-            // If you have defined a root view controller, set it here:
-            // Window.RootViewController = myViewController;
+			// If you have defined a root view controller, set it here:
+            initialViewController = Storyboard.InstantiateInitialViewController() as CallsController;
+			Window.RootViewController = initialViewController;
 
             // make the window visible
             Window.MakeKeyAndVisible();
