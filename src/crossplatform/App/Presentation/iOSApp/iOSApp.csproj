@@ -106,7 +106,6 @@
     <Compile Include="Controllers\MainController.designer.cs">
       <DependentUpon>MainController.cs</DependentUpon>
     </Compile>
-    <InterfaceDefinition Include="Views\Calls.storyboard" />
     <InterfaceDefinition Include="Views\Main.storyboard" />
   </ItemGroup>
   <ItemGroup>
