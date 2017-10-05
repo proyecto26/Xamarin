@@ -26,10 +26,6 @@ namespace iOSApp
         [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UIButton translateButton { get; set; }
 
-        [Action ("CallButton_TouchUpInside:")]
-        [GeneratedCode ("iOS Designer", "1.0")]
-        partial void CallButton_TouchUpInside (UIKit.UIButton sender);
-
         void ReleaseDesignerOutlets ()
         {
             if (callButton != null) {
