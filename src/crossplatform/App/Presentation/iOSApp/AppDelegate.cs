@@ -24,7 +24,7 @@ namespace iOSApp
             Window = new UIWindow(UIScreen.MainScreen.Bounds);
 
 			// If you have defined a root view controller, set it here:
-            initialViewController = Storyboard.InstantiateInitialViewController() as CallsController;
+            initialViewController = Storyboard.InstantiateInitialViewController() as MainController;
 			Window.RootViewController = initialViewController;
 
             // make the window visible

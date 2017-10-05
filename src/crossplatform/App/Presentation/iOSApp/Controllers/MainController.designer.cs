@@ -11,11 +11,19 @@ using UIKit;
 
 namespace iOSApp
 {
-    [Register ("ViewController")]
-    partial class ViewController
+    [Register ("MainController")]
+    partial class MainController
     {
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIButton callsButton { get; set; }
+
         void ReleaseDesignerOutlets ()
         {
+            if (callsButton != null) {
+                callsButton.Dispose ();
+                callsButton = null;
+            }
         }
     }
 }

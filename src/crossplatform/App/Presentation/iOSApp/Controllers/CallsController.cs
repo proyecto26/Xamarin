@@ -37,6 +37,9 @@ namespace iOSApp
 
         void TranslateButton_TouchUpInside(object sender, EventArgs e)
         {
+            //Prevent to open the keyboard
+            phoneNumberText.ResignFirstResponder();
+
             PhoneTranslator translator = new PhoneTranslator();
             translatedNumber = translator.ToNumber(phoneNumberText.Text);
 			if (string.IsNullOrWhiteSpace(translatedNumber))
@@ -53,6 +56,7 @@ namespace iOSApp
 
         void CallButton_TouchUpInside(object sender, EventArgs e)
         {
+            phoneNumberText.ResignFirstResponder();
             Application.currentPlatform.Dialog.ShowMessage(
 				$"Llamar al {translatedNumber}?", null, "Llamar",
 				delegate
@@ -66,7 +70,7 @@ namespace iOSApp
                             "No soportado"
                         );
 					}
-            },
+                },
 				"Cancelar"
 			);
 		}

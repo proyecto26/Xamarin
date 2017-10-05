@@ -96,17 +96,18 @@
     <InterfaceDefinition Include="Resources\LaunchScreen.xib" />
     <Content Include="Entitlements.plist" />
     <None Include="packages.config" />
-    <InterfaceDefinition Include="Main.storyboard" />
     <InterfaceDefinition Include="Controllers\CallsController.xib" />
     <Compile Include="Controllers\CallsController.cs" />
     <Compile Include="Controllers\CallsController.designer.cs">
       <DependentUpon>CallsController.cs</DependentUpon>
     </Compile>
-    <InterfaceDefinition Include="Controllers\ViewController.xib" />
-    <Compile Include="Controllers\ViewController.cs" />
-    <Compile Include="Controllers\ViewController.designer.cs">
-      <DependentUpon>ViewController.cs</DependentUpon>
+    <InterfaceDefinition Include="Controllers\MainController.xib" />
+    <Compile Include="Controllers\MainController.cs" />
+    <Compile Include="Controllers\MainController.designer.cs">
+      <DependentUpon>MainController.cs</DependentUpon>
     </Compile>
+    <InterfaceDefinition Include="Views\Calls.storyboard" />
+    <InterfaceDefinition Include="Views\Main.storyboard" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Microsoft.WindowsAzure.Mobile, Version=3.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
@@ -153,6 +154,7 @@
   <ItemGroup>
     <Folder Include="Controllers\" />
     <Folder Include="Assets.xcassets\" />
+    <Folder Include="Views\" />
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json" />
