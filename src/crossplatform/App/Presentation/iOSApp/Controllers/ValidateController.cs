@@ -28,6 +28,10 @@ namespace iOSApp
 
         partial void ValidateActivityButton_TouchUpInside(UIButton sender)
         {
+            //Remove the focus
+            emailText.ResignFirstResponder();
+            passwordText.ResignFirstResponder();
+            //Validate activity
             ValidateActivity();
         }
 
