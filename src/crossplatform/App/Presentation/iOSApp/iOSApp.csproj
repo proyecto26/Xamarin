@@ -112,6 +112,11 @@
       <DependentUpon>CallHistoryController.cs</DependentUpon>
     </Compile>
     <InterfaceDefinition Include="Views\Calls.storyboard" />
+    <InterfaceDefinition Include="Controllers\ValidateController.xib" />
+    <Compile Include="Controllers\ValidateController.cs" />
+    <Compile Include="Controllers\ValidateController.designer.cs">
+      <DependentUpon>ValidateController.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Microsoft.WindowsAzure.Mobile, Version=3.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
@@ -138,6 +143,9 @@
     <Reference Include="System.IO.Compression" />
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\..\packages\Newtonsoft.Json.10.0.3\lib\netstandard1.3\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="SALLab06">
+      <HintPath>..\..\dlls\SALLab06.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
