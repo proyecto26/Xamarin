@@ -21,7 +21,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="WgV-jK-gkp" misplaced="YES">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="33" y="185" width="375" height="647"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="1289" fixedFrame="YES">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="205.5"/>
@@ -139,6 +139,12 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7092" translatesAutoresizingMaskIntoConstraints="NO" misplaced="YES">
+                                <rect key="frame" x="239" y="106" width="108" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -147,7 +153,9 @@
                             <constraint firstItem="WgV-jK-gkp" firstAttribute="leading" secondItem="203" secondAttribute="leading" id="0DZ-Rr-bTa"/>
                             <constraint firstAttribute="trailing" secondItem="WgV-jK-gkp" secondAttribute="trailing" id="Cvl-jQ-0o7"/>
                             <constraint firstItem="200" firstAttribute="top" secondItem="WgV-jK-gkp" secondAttribute="bottom" id="c8r-iZ-wkD"/>
-                            <constraint firstItem="WgV-jK-gkp" firstAttribute="top" secondItem="199" secondAttribute="bottom" id="j8M-vi-A3H"/>
+                            <constraint id="7111" firstItem="7092" firstAttribute="top" secondItem="199" secondAttribute="bottom" constant="26"/>
+                            <constraint id="7543" firstItem="7092" firstAttribute="centerX" secondItem="203" secondAttribute="centerX"/>
+                            <constraint id="8067" firstItem="WgV-jK-gkp" firstAttribute="top" secondItem="7092" secondAttribute="bottom" constant="26"/>
                         </constraints>
                     </view>
                     <connections>
