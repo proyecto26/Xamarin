@@ -107,6 +107,10 @@
       <DependentUpon>MainController.cs</DependentUpon>
     </Compile>
     <InterfaceDefinition Include="Views\Main.storyboard" />
+    <Compile Include="Controllers\CallHistoryController.cs" />
+    <Compile Include="Controllers\CallHistoryController.designer.cs">
+      <DependentUpon>CallHistoryController.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Microsoft.WindowsAzure.Mobile, Version=3.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">

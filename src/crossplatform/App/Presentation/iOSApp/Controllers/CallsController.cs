@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using iOSApp.PlatformSpecific;
 using PCL.Helpers;
 using UIKit;
@@ -8,7 +9,7 @@ namespace iOSApp
     public partial class CallsController : UIViewController
     {
         string translatedNumber = string.Empty;
-
+        List<string> phoneNumbers = new List<string>();
 
         public CallsController() : base("CallsController", null)
         {
@@ -61,6 +62,7 @@ namespace iOSApp
 				$"Llamar al {translatedNumber}?", null, "Llamar",
 				delegate
 				{
+                    phoneNumbers.Add(translatedNumber);
 					var url = new Foundation.NSUrl($"tel:{translatedNumber}");
 
 					if (!UIApplication.SharedApplication.OpenUrl(url))
@@ -74,6 +76,15 @@ namespace iOSApp
 				"Cancelar"
 			);
 		}
+
+        public override void PrepareForSegue(UIStoryboardSegue segue, Foundation.NSObject sender)
+        {
+            base.PrepareForSegue(segue, sender);
+
+            if(segue.DestinationViewController is CallHistoryController controller){
+                controller.PhoneNumbers = phoneNumbers;
+            }
+        }
     }
 }
 

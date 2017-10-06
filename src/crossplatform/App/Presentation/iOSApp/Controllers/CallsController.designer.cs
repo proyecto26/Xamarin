@@ -20,6 +20,10 @@ namespace iOSApp
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIButton callHistoryButton { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UITextField phoneNumberText { get; set; }
 
         [Outlet]
@@ -31,6 +35,11 @@ namespace iOSApp
             if (callButton != null) {
                 callButton.Dispose ();
                 callButton = null;
+            }
+
+            if (callHistoryButton != null) {
+                callHistoryButton.Dispose ();
+                callHistoryButton = null;
             }
 
             if (phoneNumberText != null) {
