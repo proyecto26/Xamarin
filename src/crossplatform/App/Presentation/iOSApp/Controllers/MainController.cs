@@ -25,6 +25,16 @@ namespace iOSApp
             base.DidReceiveMemoryWarning();
             // Release any cached data, images, etc that aren't in use.
         }
+
+		/// <summary>
+		/// Navigate to other screen without Segue
+		/// </summary>
+        public static UIStoryboard CallsStoryboard = UIStoryboard.FromName("Calls", null);
+		partial void CallsButton_TouchUpInside(UIButton sender)
+        {
+            var controller = CallsStoryboard.InstantiateInitialViewController() as CallsController;
+            this.NavigationController.PushViewController(controller, true);
+        }
     }
 }
 

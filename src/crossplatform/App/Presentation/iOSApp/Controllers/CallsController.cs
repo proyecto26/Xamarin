@@ -77,6 +77,9 @@ namespace iOSApp
 			);
 		}
 
+        /// <summary>
+        /// Using the Segue to navigate to other screen
+        /// </summary>
         public override void PrepareForSegue(UIStoryboardSegue segue, Foundation.NSObject sender)
         {
             base.PrepareForSegue(segue, sender);

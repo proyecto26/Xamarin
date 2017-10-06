@@ -35,7 +35,7 @@
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                                 <connections>
-                                                    <segue id="4167" destination="2527" kind="show"/>
+                                                    <action selector="CallsButton_TouchUpInside:" destination="202" id="6636" eventType="touchUpInside"/>
                                                 </connections>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </button>
@@ -173,104 +173,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2207" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-330" y="153"/>
-        </scene>
-        <scene sceneID="2526">
-            <objects>
-                <viewController id="2527" customClass="CallsController" sceneMemberID="viewController" title="Llamadas">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="2541"/>
-                        <viewControllerLayoutGuide type="bottom" id="2550"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="2534">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Proporciona un número de teléfono" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2535" misplaced="YES">
-                                <rect key="frame" x="120" y="88" width="360" height="35"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="center" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1-855-XAMARIN" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2531" misplaced="YES">
-                                <rect key="frame" x="62" y="148" width="482" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2533" misplaced="YES">
-                                <rect key="frame" x="36" y="197" width="343" height="30"/>
-                                <state key="normal" title="Convertir">
-                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2529" misplaced="YES">
-                                <rect key="frame" x="36" y="243" width="343" height="30"/>
-                                <state key="normal" title="Llamar">
-                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5168" misplaced="YES">
-                                <rect key="frame" x="36" y="289" width="343" height="30"/>
-                                <state key="normal" title="Historial de Llamadas">
-                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <segue id="5576" destination="5187" kind="show"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint id="2539" firstItem="2534" firstAttribute="centerX" secondItem="2535" secondAttribute="centerX"/>
-                            <constraint id="2540" firstItem="2535" firstAttribute="top" secondItem="2541" secondAttribute="bottom" constant="30"/>
-                            <constraint id="2543" firstItem="2534" firstAttribute="leadingMargin" secondItem="2531" secondAttribute="leading"/>
-                            <constraint id="2544" firstItem="2531" firstAttribute="trailing" secondItem="2534" secondAttribute="trailingMargin"/>
-                            <constraint id="2545" firstItem="2534" firstAttribute="centerX" secondItem="2533" secondAttribute="centerX"/>
-                            <constraint id="2546" firstItem="2534" firstAttribute="centerX" secondItem="2529" secondAttribute="centerX"/>
-                            <constraint id="2547" firstItem="2531" firstAttribute="top" secondItem="2535" secondAttribute="bottom" constant="20"/>
-                            <constraint id="2548" firstItem="2533" firstAttribute="top" secondItem="2531" secondAttribute="bottom" constant="20"/>
-                            <constraint id="2549" firstItem="2529" firstAttribute="top" secondItem="2533" secondAttribute="bottom" constant="20"/>
-                            <constraint id="5835" firstItem="2534" firstAttribute="centerX" secondItem="5168" secondAttribute="centerX"/>
-                            <constraint id="6095" firstItem="5168" firstAttribute="top" secondItem="2529" secondAttribute="bottom" constant="20"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="callButton" destination="2529" id="2528"/>
-                        <outlet property="phoneNumberText" destination="2531" id="2530"/>
-                        <outlet property="translateButton" destination="2533" id="2532"/>
-                        <outlet property="callHistoryButton" destination="5168" id="name-outlet-5168"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="2551" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1101" y="153"/>
-        </scene>
-        <scene sceneID="5186">
-            <objects>
-                <tableViewController id="5187" sceneMemberID="viewController" customClass="CallHistoryController" title="Historial de llamadas">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="5188">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="5191">
-                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5191" id="5192">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="5187" id="5189"/>
-                            <outlet property="delegate" destination="5187" id="5190"/>
-                        </connections>
-                    </tableView>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="5193" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1101" y="855"/>
         </scene>
     </scenes>
 </document>
