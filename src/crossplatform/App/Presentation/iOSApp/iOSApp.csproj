@@ -117,6 +117,12 @@
     <Compile Include="Controllers\ValidateController.designer.cs">
       <DependentUpon>ValidateController.cs</DependentUpon>
     </Compile>
+    <InterfaceDefinition Include="Views\Forms.storyboard" />
+    <InterfaceDefinition Include="Controllers\FormsController.xib" />
+    <Compile Include="Controllers\FormsController.cs" />
+    <Compile Include="Controllers\FormsController.designer.cs">
+      <DependentUpon>FormsController.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Microsoft.WindowsAzure.Mobile, Version=3.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">

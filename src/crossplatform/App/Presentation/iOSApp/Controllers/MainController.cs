@@ -35,6 +35,13 @@ namespace iOSApp
             var controller = CallsStoryboard.InstantiateInitialViewController() as CallsController;
             this.NavigationController.PushViewController(controller, true);
         }
+
+        public static UIStoryboard FormsStoryboard = UIStoryboard.FromName("Forms", null);
+        partial void ValidateButton_TouchUpInside(UIButton sender)
+        {
+			var controller = FormsStoryboard.InstantiateInitialViewController() as FormsController;
+			this.NavigationController.PushViewController(controller, true);
+        }
     }
 }
 
