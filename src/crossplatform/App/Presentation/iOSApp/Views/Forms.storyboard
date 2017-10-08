@@ -128,7 +128,7 @@
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="1936" secondAttribute="trailing" id="2169"/>
                             <constraint firstItem="1936" firstAttribute="leading" secondItem="1902" secondAttribute="leadingMargin" id="2242"/>
-                            <constraint firstItem="1936" firstAttribute="top" secondItem="1898" secondAttribute="bottom" constant="50" id="2671"/>
+                            <constraint firstItem="1936" firstAttribute="top" secondItem="1898" secondAttribute="bottom" constant="26" id="2671"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -148,20 +148,40 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ID" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="5236" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ID" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="5236" translatesAutoresizingMaskIntoConstraints="NO" misplaced="YES">
                                 <rect key="frame" x="37" y="40" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Text" borderStyle="roundedRect" minimumFontSize="17" id="5237" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
-                                <rect key="frame" x="75" y="36" width="97" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="5237" translatesAutoresizingMaskIntoConstraints="NO" misplaced="YES">
+                                <rect key="frame" x="87" y="36" width="107" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="5679" translatesAutoresizingMaskIntoConstraints="NO" misplaced="YES">
+                                <rect key="frame" x="202" y="36" width="71" height="30"/>
+                                <state key="normal" title="Buscar">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ProductFound" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="8440" translatesAutoresizingMaskIntoConstraints="NO" misplaced="YES">
+                                <rect key="frame" x="37" y="91" width="187" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" colorSpace="calibratedRGB" red="1" green="0" blue="0" alpha="1"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
+                        <constraints>
+                            <constraint id="6595" firstItem="5236" firstAttribute="top" secondItem="4928" secondAttribute="bottom" constant="30"/>
+                            <constraint id="6596" firstItem="5236" firstAttribute="leading" secondItem="4932" secondAttribute="leadingMargin"/>
+                            <constraint id="7041" firstItem="5237" firstAttribute="leading" secondItem="5236" secondAttribute="centerX" constant="20"/>
+                            <constraint id="7492" firstItem="5237" firstAttribute="top" secondItem="4928" secondAttribute="bottom" constant="26"/>
+                            <constraint id="7982" firstItem="5679" firstAttribute="leading" secondItem="5237" secondAttribute="trailing" constant="20"/>
+                            <constraint id="7983" firstItem="5679" firstAttribute="top" secondItem="4928" secondAttribute="bottom" constant="26"/>
+                            <constraint id="8441" firstItem="8440" firstAttribute="leading" secondItem="4932" secondAttribute="leadingMargin"/>
+                            <constraint id="8442" firstItem="8440" firstAttribute="top" secondItem="5236" secondAttribute="bottom" constant="26"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4933" userLabel="First Responder" sceneMemberID="firstResponder"/>

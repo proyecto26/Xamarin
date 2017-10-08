@@ -20,7 +20,7 @@ namespace iOSApp
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UIButton validateButton { get; set; }
+        UIKit.UIButton formsButton { get; set; }
 
         [Action ("CallsButton_TouchUpInside:")]
         [GeneratedCode ("iOS Designer", "1.0")]
@@ -37,9 +37,9 @@ namespace iOSApp
                 callsButton = null;
             }
 
-            if (validateButton != null) {
-                validateButton.Dispose ();
-                validateButton = null;
+            if (formsButton != null) {
+                formsButton.Dispose ();
+                formsButton = null;
             }
         }
     }

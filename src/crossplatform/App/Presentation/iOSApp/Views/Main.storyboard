@@ -30,7 +30,7 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="111.5" height="39"/>
                                                 <color key="backgroundColor" red="0.65098039215686276" green="0.0" blue="0.62745098039215685" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <state key="normal" title="LLAMADAS">
+                                                <state key="normal" title="Llamadas">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
@@ -43,7 +43,7 @@
                                                 <rect key="frame" x="121.5" y="0.0" width="112" height="39"/>
                                                 <color key="backgroundColor" red="0.65098039215686276" green="0.0" blue="0.62745098039215685" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <state key="normal" title="VALIDAR">
+                                                <state key="normal" title="Formularios">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
@@ -161,7 +161,7 @@
                     <navigationItem key="navigationItem" title="iOS App" id="2523"/>
                     <connections>
                         <outlet property="callsButton" destination="405" id="name-outlet-405"/>
-                        <outlet property="validateButton" destination="1061" id="name-outlet-1061"/>
+                        <outlet property="formsButton" destination="1061" id="name-outlet-1061"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="204" userLabel="First Responder" sceneMemberID="firstResponder"/>
