@@ -123,6 +123,10 @@
     <Compile Include="Controllers\FormsController.designer.cs">
       <DependentUpon>FormsController.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controllers\ProductController.cs" />
+    <Compile Include="Controllers\ProductController.designer.cs">
+      <DependentUpon>ProductController.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Microsoft.WindowsAzure.Mobile, Version=3.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
@@ -152,6 +156,9 @@
     </Reference>
     <Reference Include="SALLab06">
       <HintPath>..\..\dlls\SALLab06.dll</HintPath>
+    </Reference>
+    <Reference Include="SALLab07">
+      <HintPath>..\..\dlls\SALLab07.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
