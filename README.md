@@ -3,10 +3,9 @@ Native apps for multiple platforms **(iOS, Android and Windows)** on a shared C#
 * **Xamarin.Forms:** Apps that require little platform-specific functionality **(Code sharing is more important than custom UI)**.
 * **Xamarin.iOS & Xamarin.Android:** Apps with interactions that require native behavior **(Custom UI is more important than code sharing)**.
 
-<img width="auto" height="411px" src="img/main.png">|
-<img width="auto" height="411px" src="img/call.png">|
-<img width="auto" height="411px" src="img/form.png">|
-:---: | :---: | :---: |
+<img width="auto" height="411px" src="img/main.png">
+<img width="auto" height="411px" src="img/call.png">
+<img width="auto" height="411px" src="img/form.png">
 
 ## Templates:
 - **Xamarin.Android:** https://github.com/proyecto26/Xamarin/tree/master/src/android/App
@@ -163,14 +162,22 @@ var path = Path.Combine(libraryPath, fileName);
 ## Other projects
 - **[Hack@Home - Xamarin 3.0](https://github.com/jdnichollsc/Hack-Home)**.
 
-## Supporting
+## Credits 👍
+- [TI Capacitación](https://ticapacitacion.com)
+
+## Contributing ✨
+When contributing to this repository, please first discuss the change you wish to make via issue, email, or any other method with the owners of this repository before making a change.  
+Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated** ❤️.  
+You can learn more about how you can contribute to this project in the [contribution guide](https://github.com/proyecto26/Xamarin/blob/master/CONTRIBUTING.md).
+
+## Supporting 🍻
 I believe in Unicorns 🦄
 Support [me](http://www.paypal.me/jdnichollsc/2), if you do too.
 
-## Credits
-- [TI Capacitación](https://ticapacitacion.com)
+## License ⚖️
+This repository is available under the [MIT License](https://github.com/proyecto26/Xamarin/blob/master/LICENSE).
 
-## Happy coding
+## Happy coding 💯
 Made with <3
 
 <img width="150px" src="http://phaser.azurewebsites.net/assets/nicholls.png" align="right">
