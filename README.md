@@ -3,9 +3,19 @@ Native apps for multiple platforms **(iOS, Android and Windows)** on a shared C#
 * **Xamarin.Forms:** Apps that require little platform-specific functionality **(Code sharing is more important than custom UI)**.
 * **Xamarin.iOS & Xamarin.Android:** Apps with interactions that require native behavior **(Custom UI is more important than code sharing)**.
 
-<img width="auto" height="411px" src="img/main.png">
-<img width="auto" height="411px" src="img/call.png">
-<img width="auto" height="411px" src="img/form.png">
+<table>
+  <tr>
+    <td>
+      <img width="auto" height="411px" src="img/main.png" alt="Main Screen">
+    </td>
+    <td>
+      <img width="auto" height="411px" src="img/call.png" alt="Call Phone Screen">
+    </td>
+    <td>
+      <img width="auto" height="411px" src="img/form.png" alt="Form Screen">
+    </td>
+  </tr>
+</table>
 
 ## Templates:
 - **Xamarin.Android:** https://github.com/proyecto26/Xamarin/tree/master/src/android/App
